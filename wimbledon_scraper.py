@@ -24,6 +24,15 @@ def get_2014_round_one():
 					prev_name = None
 	list_matches(matches)
 
+def get_draws_last_ten_years():
+	for i in range(2003, 2014):
+		write_draw(i, get_draw(i))
+
+def write_draw(year, draw):
+	info_file = open('wimbledon_draw_' + str(year) + '.txt', 'w')
+	info_file.write(json.dumps(draw, indent=4, sort_keys=True))
+	info_file.close()
+
 def get_draw(year):
 	draw = {}
 	url = 'http://www.atpworldtour.com/Share/Event-Draws.aspx?e=540&y=' + str(year)
