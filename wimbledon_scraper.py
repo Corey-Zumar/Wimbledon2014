@@ -15,7 +15,12 @@ def get_2014_round_one():
 				if prev_name == None:
 					prev_name = name
 				else:
-					matches.append((prev_name, name))
+					match = {}
+					match['player_1'] = prev_name
+					match['player_2'] = name
+					match['score'] = ''
+					match['winner'] = ''
+					matches.append(match)
 					prev_name = None
 	list_matches(matches)
 
