@@ -1,0 +1,552 @@
+{
+    "African American Studies": {
+        "African American Studies is a multidisciplinary field focusing on race and ethnicity as a social construction.  The African American Studies major at Berkeley explores patterns of social structure and political economies in African and African American life, with a particular focus on North America and the Caribbean. \r\t\t\t\t\t": [
+            "Ethnic Studies", 
+            "American Studies", 
+            "Gender and Women's Studies", 
+            "Development Studies", 
+            "Film"
+        ]
+    }, 
+    "American Studies": {
+        "The interdisciplinary major in American Studies focuses on American society from pre-colonial times to the contemporary period.  The major also includes a larger international perspective, recognizing that political, cultural, and economic patterns do not stop at national borders.\r\t\t\t\t\t": [
+            "Interdisciplinary Studies", 
+            "Ethnic Studies", 
+            "Legal Studies", 
+            "English", 
+            "Film"
+        ]
+    }, 
+    "Anthropology": {
+        "Anthropology is the study of contemporary societies, past peoples, and human biology.\rThe major at Berkeley offers electives in sociocultural, biological, and medical anthropology and explores human origins, archeology, social organization, and culture change around the world.\r": [
+            "Sociology", 
+            "Philosophy", 
+            "Linguistics", 
+            "Political Science", 
+            "Psychology", 
+            "Integrative Biology", 
+            "Ethnic Studies", 
+            "Classics", 
+            "Near Eastern Studies"
+        ]
+    }, 
+    "Asian American and Asian Diaspora Studies": {
+        "The Asian American and Asian Diaspora Studies major at Berkeley is dedicated to the multidisciplinary study of historical and contemporary experiences of Asian-ancestry groups in local, national and global contexts.  Students frame this study within larger intellectual inquiries of race and ethnicity.\r\t\t\t\t\t": [
+            "Asian Studies", 
+            "American Studies", 
+            "Ethnic Studies", 
+            "Sociology", 
+            "Political Science"
+        ]
+    }, 
+    "Asian Studies": {
+        "The Asian Studies major provides groundwork in an Asian language, a familiarity with the theories and methods of one particular discipline, and a broad range of interdisciplinary course work focused on either China or Japan.  The major offers a rigorous but flexible interdisciplinary program designed to offer students more access to course offerings in the Asian field across the campus than is possible in departmental major requirement structures.\r\t\t\t\t\t": [
+            "Geography", 
+            "East Asian Language", 
+            "Ethnic Studies"
+        ]
+    }, 
+    "Astrophysics": {
+        "The Department of Astronomy offers an undergraduate major in astrophysics, with two options; a focused curriculum for students intending to pursue further work in astronomy and a second, broad curriculum for the more general student intending to pursue educational, technical, or journalistic occupations.\r\t\t\t\t\t": [
+            "Physics", 
+            "Physical Science", 
+            "Earth & Planetary Science", 
+            "Geography", 
+            "Chemistry", 
+            "Mathematics"
+        ]
+    }, 
+    "Celtic Studies": {
+        "The major in Celtic Studies provides a broad understanding of the place of Celtic languages and cultures in the world, as well as a firm grounding in one or more of the Celtic languages. To focus their studies, students also select courses from a related discipline or language.": [
+            "Anthropology", 
+            "Comparative Literature", 
+            "English", 
+            "History", 
+            "History of Art", 
+            "Religious Studies", 
+            "Scandinavian"
+        ]
+    }, 
+    "Chemistry": {
+        "The Bachelor of Arts degree in Chemistry, which is offered to L&S; students through the College of Chemistry, includes a greater number of humanities and social science courses than the Bachelor of Science Degree in the college of Chemistry.  The major is designed for those interested in careers in teaching, medicine, or other sciences in which a basic understanding of chemical processes is necessary. \r\t\t\t\t\t": [
+            "Earth & Planetary Science", 
+            "Physics", 
+            "Molecular & Cell Biology"
+        ]
+    }, 
+    "Chicano Studies": {
+        "The Chicano Studies major offers a multidisciplinary curriculum that critically examines the historical and contemporary experiences of people of Mexican descent in the context of American society and institutions. In light of continuous immigration from Mexico and Central America, students also review aspects of Mexican culture and politics as they bear upon the Chicano community, past and present.\r\t\t\t\t\t": [
+            "Latin American Studies ", 
+            "Spanish & Portuguese", 
+            "Ethnic Studies", 
+            "American Studies", 
+            "Gender & Women's Studies", 
+            "Interdisciplinary Studies ", 
+            "Comparative Literature "
+        ]
+    }, 
+    "Classics": {
+        "Central to the field of Classics is the study of language and literature of Greek and Latin. The course of study at Berkeley also incorporates the disciplines of history, philosophy, archaeology, epigraphy, papyrology, numismatics, palaeography, cultural studies, gender studies, and the classical tradition as they relate to the ancient Mediterranean world. The department offers four major programs: Classical Civilizations, Greek, Latin, and Classical Languages.\t": [
+            "Ethnic Studies", 
+            "American Studies", 
+            "Gender and Women's Studies", 
+            "Development Studies", 
+            "Film"
+        ]
+    }, 
+    "Cognitive Science": {
+        "Cognitive Science at Berkeley is concerned with the acquisition, representation, and use of knowledge by individual minds, brains, and machines, as well as by groups, institutions, and other social entities.   Students in the major draw on methodologies and perspectives from a wide variety of disciplines, including  philosophy, psychology, linguistics, computer science, and neuroscience.": [
+            "Linguistics", 
+            "Philosophy", 
+            "Anthropology", 
+            "Mathematics", 
+            "Psychology", 
+            "Computer Science"
+        ]
+    }, 
+    "Comparative Literature": {
+        "Comparative Literature encompasses a wide range of concerns about literature, including the relationship between literatures within national, historical, theoretical, and thematic contexts, as well as the relationship between literature and other disciplines (philosophy, politics, art, etc.). The major requires a high level of linguistic aptitude; students are expected to familiarize themselves with literature in at least one national tradition outside of English in the original language.\t": [
+            "Film", 
+            "Classics", 
+            "English", 
+            "Linguistics"
+        ]
+    }, 
+    "Computer Science": {
+        "The Bachelor of Arts degree in Computer Science is offered by the College of Engineering for L&S; students who are interested in a broader education in the sciences and arts than is possible with the Electrical Engineering degree designed for Engineering students.  The major covers a wide range of areas in computer science, including theory of computation, design and analysis of algorithms, architecture and logic design of computers, programming languages, compilers, operating systems, scientific computation, computer graphics, databases, artificial intelligence and natural language processing.\r\t\t\t\t\t": [
+            "Cognitive Science", 
+            "Mathematics", 
+            "Linguistics", 
+            "Philosophy", 
+            "Statistics", 
+            "Economics"
+        ]
+    }, 
+    "Development Studies": {
+        "Generally, \"development studies\" means the systematic study of problems, processes and prospects of the developing areas of the world.  Development Studies at Berkeley focuses on the global aspect of current development problems and seeks to root student knowledge in the profoundly local and regional character of development trajectories and practice.\r\t\t\t\t\t": [
+            "Geography", 
+            "Political Economy", 
+            "Environmental Economics & Policy", 
+            "Statistics"
+        ]
+    }, 
+    "Dutch": {
+        "The curriculum in Dutch Studies focuses on the language, literature, and culture of The Netherlands and Flanders.\r\t\t\t\t\t": [
+            "Philosophy", 
+            "Rhetoric", 
+            "Sociology", 
+            "History", 
+            "Film"
+        ]
+    }, 
+    "Earth and Planetary Science": {
+        "The major in Earth and Planetary Science explores the origin, evolution, structure and dynamics of the Earth and other planetary bodies. This is an emerging and interdisciplinary field, drawing on geology, geophysics, geochemistry, oceanography, and the atmospheric, environmental and planetary sciences. The major offers core training in six specializations (atmospheric science, environmental Earth science, geology, geophysics, marine science, and planetary science) as well as integrative courses that provide a broad overview.": [
+            "Geography", 
+            "Astrophysics", 
+            "Integrative Biology", 
+            "Physical Science", 
+            "Chemistry"
+        ]
+    }, 
+    "East Asian Languages and Culture": {
+        "The Department of East Asian Languages and Cultures offers majors in Chinese and Japanese. Students are trained in speaking, reading and writing in a selected modern language and study a variety of text focusing on historical and cultural context. ": [
+            "Asian Studies", 
+            "Religious Studies", 
+            "Philosophy", 
+            "Comparative Literature", 
+            "Linguistics"
+        ]
+    }, 
+    "Economics": {
+        "Economics is an impacted (\"capped\") major. Due to very high demand, special restrictions on declaration of the major are in effect. Transfer students must apply during their first semester. Non-transfer students must apply prior to exceeding 80 units of post-high school coursework. See the department website for details.": [
+            "Environmental Economics & Policy", 
+            "Political Science", 
+            "Political Economy", 
+            "Development Studies", 
+            "Mathematics", 
+            "Statistics", 
+            "Sociology"
+        ]
+    }, 
+    "English": {
+        "The major in English is designed to introduce students to the variety of literatures in English, to create an awareness of theories and methods informing literary analysis, and to provide continued training in both expository and creative writing.\r\t\t\t\t\t": [
+            "Comparative Literature", 
+            "Rhetoric", 
+            "Theater & Dance", 
+            "Film", 
+            "Philosophy"
+        ]
+    }, 
+    "Environmental Economics and Policy": {
+        "Environmental Economics and Policy is an impacted (\"capped\") major. Due to very high demand, special restrictions on declaration of the major are in effect. Transfer students must apply during their first semester. Non-transfer students must apply prior to exceeding 80 units of post-high school coursework. See the department website for details.": [
+            "Geography", 
+            "Development Studies", 
+            "Political Economy", 
+            "Latin American Studies"
+        ]
+    }, 
+    "Ethnic Studies": {
+        "The major in Ethnic Studies provides a core curriculum designed to develop a comparative and multidisciplinary understanding of the experiences and communities of African Americans, Asian Americans, Chicanos/Latinos, and Native Americans. Students examine the history, culture, politics, and sociology of Third World communities in the United States within the general context of American society and institutions.\r\t\t\t\t\t": [
+            "Sociology", 
+            "African American Studies", 
+            "Asian American and Asian Diaspora Studies", 
+            "Chicano Studies", 
+            "Native American Studies "
+        ]
+    }, 
+    "Film": {
+        "   Students in the Film major at Berkeley are taught to think historically, theoretically, and analytically about a wide range of cinematic forms. The core of the major includes a sequence on film history as well as courses on the documentary, avant-garde film, and film theory. Elective courses are offered within the department and in cooperation with a variety of disciplines. Although film production is not a focus of this program, some hands-on production is possible. Internship opportunities are available with local film and video production companies.": [
+            "Rhetoric", 
+            "English", 
+            "Interdisciplinary Studies", 
+            "History of Art", 
+            "Comparative Literature"
+        ]
+    }, 
+    "French": {
+        "Students in the undergraduate major in French acquire a considerable degree of competence in the written and spoken language and gain familiarity with the literature and culture of France and the French-speaking world. The department offers a large selection of courses in composition, stylistics, translation and linguistics, as well as the opportunity to examine French film historically and critically. \r\t\t\t\t\t": [
+            "Film", 
+            "Political Economy", 
+            "History of Art", 
+            "Development Studies", 
+            "Comparative Literature", 
+            "Linguistics", 
+            "Philosophy", 
+            "Classics"
+        ]
+    }, 
+    "Gender and Women's Studies": {
+        "The undergraduate program in Gender and Women's Studies is designed to introduce students to gender as a category of analysis and the workings of power in social and historical life. The department offers a multi-disciplinary study of feminist theory, feminism in a transnational world, the politics of representation, gender and health, and the politics of childhood.\r\t\t\t\t\t": [
+            "Rhetoric", 
+            "Film", 
+            "Anthropology", 
+            "Ethnic Studies", 
+            "Interdisciplinary Studies", 
+            "American Studies", 
+            "Sociology"
+        ]
+    }, 
+    "Geography": {
+        "Geography is the study of the earth and sociocultural responses to it.  The Geography major at Berkeley covers a wide range of topics:  the culture of cities and the dynamics of the global economy; race, gender, and social movements; glaciers and climate change; and the origins of agriculture and the evolution of plant life. Geography students may participate in field trips in the Bay Area and surrounding communities.\r\t\t\t\t\t": [
+            "Earth & Planetary Science", 
+            "Interdisciplinary Studies", 
+            "History"
+        ]
+    }, 
+    "German": {
+        "The German program challenges students to gain fluency in the German language and to acquire cultural competency through a large selection of courses in literature, linguistics, philosophy, psychology, history, film, and business. Students in the major read works in their original language, and often study abroad in German speaking countries.\r\t\t\t\t\t": [
+            "Philosophy", 
+            "Rhetoric", 
+            "Sociology", 
+            "History", 
+            "Film"
+        ]
+    }, 
+    "History": {
+        "The History major at Berkeley offers students a wide range of courses that span across virtually all geographical and chronological fields.  Students define their own field of concentration by region (Latin America, Middle East, Germany), by time (Ancient, Medieval, 20th Century), or by topic (History of Religion, History of Science, Black History).\r\t\t\t\t\t": [
+            "Political Science", 
+            "Classics", 
+            "Near Eastern Studies", 
+            "Peace & Conflict Studies", 
+            "Latin American Studies", 
+            "Italian Studies", 
+            "Gender & Women's Studies"
+        ]
+    }, 
+    "History of Art": {
+        "The History of Art major at Berkeley is an introduction to the history of the visual arts in all major periods of Western and Asian culture, emphasizing solid training in perceptual, historical, research, and critical skills. Students in the major select an emphasis either in Western or Asian art history or they may propose a Designated emphasis in their own area/topic of interest. ": [
+            "Classics", 
+            "Italian Studies", 
+            "Philosophy", 
+            "Film", 
+            "Comparative Literature"
+        ]
+    }, 
+    "Integrative Biology": {
+        "The Department of Integrative Biology undergraduate program focuses on the structure and function in the evolution of diverse biological systems at all levels of organization, from molecules to the biosphere and in organisms, from viruses to higher plants and animals. Areas of focus within the major include behavioral biology, biomechanics, botany, developmental biology, ecology, evolution, marine biology, paleontology, and physiology.\r\t\t\t\t\t": [
+            "Anthropology", 
+            "Earth and Planetary Studies", 
+            "Public Health", 
+            "Molecular and Cell Biology"
+        ]
+    }, 
+    "Interdisciplinary Studies Field Major": {
+        "The Interdisciplinary Studies Field Major (ISF) is an individualized cross-disciplinary research major that utilizes courses from the social sciences, the humanities, and the professional schools.  Students choose a unifying principle, theme, or topic of research (called the \"area of concentration\"), upon which the senior thesis is based.\r\t\t\t\t\t": [
+            "Geography", 
+            "American Studies", 
+            "Rhetoric", 
+            "Film", 
+            "Sociology"
+        ]
+    }, 
+    "Italian Studies": {
+        "The Department of Italian Studies at Berkeley offers courses in Italian language, literature, history, cultural studies, film, and folklore, in both Italian and English. Students in the major are trained develop a high level of proficiency in speaking, reading, writing, and comprehending Italian. \r\t\t\t\t\t": [
+            "Film", 
+            "French", 
+            "Classics", 
+            "Comparative Literature", 
+            "History", 
+            "History of Art", 
+            "Spanish and Portuguese"
+        ]
+    }, 
+    "Latin American Studies": {
+        "Latin American Studies is an interdisciplinary major that focuses on the history, culture, literature, and environment of Latin America, offering a broader perspective than is usually available through a departmental major.  Spanish and Portuguese are required for the major, with an intermediate level of proficiency required in one of these languages and an elementary level required in the second.  \r\t\t\t\t\t": [
+            "Spanish & Portuguese", 
+            "Chicano Studies", 
+            "Interdisciplinary Studies"
+        ]
+    }, 
+    "Legal Studies": {
+        "Legal Studies provides an introduction to legal ideas, legal institutions, and the legal process, with the aim of developing in its students the ability to think clearly and analyze arguments and claims critically.": [
+            "Peace & Conflict Studies", 
+            "Philosophy", 
+            "Rhetoric", 
+            "Political Science", 
+            "Sociology"
+        ]
+    }, 
+    "Linguistics": {
+        "The Linguistics major at Berkeley studies the physical, cognitive, social and historical aspects of language.  It addresses features that all languages have in common, the ways in which languages differ from one another, and the ways in which languages change over time. Linguistics students learn about cognitive science (how language is processed in the brain), phonetics (sounds and their patterns), morphology (word structure), syntax (sentence structure), semantics (meaning), and sociolinguistics (how language is used in society).\r\t\t\t\t\t": [
+            "Anthropology", 
+            "Cognitive Science", 
+            "Psychology"
+        ]
+    }, 
+    "Mathematics": {
+        "Mathematics majors at Berkeley learn the internal workings of the language of mathematics, its central concepts and their interconnections.  Students learn to use mathematical concepts to formulate, analyze, and solve real-world problems.  Three options are available: Mathematics, Mathematics with a Teaching Concentration, and Applied Mathematics.  The goals are similar for all three, to provide students with an understanding of the basic rules of logic, to develop problem-solving and modeling skills, and to formulate mathematical statements precisely.": [
+            "Philosophy", 
+            "Statistics", 
+            "Economics", 
+            "Physics", 
+            "Physical Science"
+        ]
+    }, 
+    "Media Studies": {
+        "Media Studies is an impacted (\"capped\") major.  Due to very high demand, special restrictions on declaration of the major are in effect.  Transfer students must apply during their first semester.  Non-transfer students must apply prior to exceeding 80 units of post-high school coursework.  See the department website for details.": [
+            "Rhetoric", 
+            "Film", 
+            "American Studies", 
+            "Sociology"
+        ]
+    }, 
+    "Middle Eastern Studies": {
+        "The interdisciplinary major in Middle Eastern Studies offers a broad and balanced view of the culture and history of the Arab world, Turkey, Iran, and Israel, intertwining history and culture, with an emphasis on modern and contemporary issues.  Intermediate level proficiency in at least one modern Middle Eastern language is included in the lower division requirements.\n\t\t\t\t\t": [
+            "Near Eastern Studies", 
+            "Religious Studies", 
+            "Peace & Conflict Studies", 
+            "Development Studies", 
+            "Geography", 
+            "Gender & Women's Studies", 
+            "Political Science"
+        ]
+    }, 
+    "Molecular and Cell Biology": {
+        "Undergraduate programs in the Department of Molecular and Cell Biology (MCB) concentrates on the molecular structures and processes of cellular life and their roles in the function, reproduction, and development of living organisms. Students in the major select an emphasis in one of several specialized disciplines including biochemistry, biophysics, structural biology, genetics, genomics, bioinformatics, cell biology, developmental biology, pathogenesis and neurobiology.\r\t\t\t\t\t": [
+            "Chemistry", 
+            "Public Health", 
+            "Cognitive Science", 
+            "Integrative Biology"
+        ]
+    }, 
+    "Music": {
+        "The Music program at Berkeley encompasses historical and cultural studies, musicianship and theory, and performance. Students establish a solid grounding in practical skills and pre-professional training. To prepare to declare the major, students must complete the Music Placement Procedure, which includes a written exam, audition and faculty interview.\r\t\t\t\t\t": [
+            "Theater & Dance", 
+            "Film", 
+            "Rhetoric", 
+            "Classics"
+        ]
+    }, 
+    "Native American Studies": {
+        "The Native American Studies program aims to broaden the understanding of students interested in the history, culture, and contemporary situations of Native Americans in the United States.  Courses examine historical and cultural features of Native Americans and contemporary legal and social institutions as they affect Native American life. The program encourages students to take part in community-oriented education through field work or studies directed towards community situations and problems.\r\t\t\t\t\t": [
+            "Religious Studies", 
+            "Linguistics", 
+            "American Studies", 
+            "Ethnic Studies"
+        ]
+    }, 
+    "Near Eastern Studies": {
+        "Programs in the Near Eastern Studies Department focus on languages, literatures, and the ancient, medieval, and modern Near East. The Department offers specialized training in Archaeology, Art History, Assyriology, Egyptology, Iranian Studies, Judaic and Islamic Studies, Comparative Semitics, Turkish, Hebrew, Arabic and Persian. The three majors options include Near Eastern Languages and Literatures, Ancient Egyptian and Near Eastern Art and Archaeology, and Near Eastern Civilizations. \r\t\t\t\t\t": [
+            "Middle Eastern Studies", 
+            "Peace & Conflict Studies", 
+            "Classics", 
+            "History of Art", 
+            "History"
+        ]
+    }, 
+    "Operations Research and Management Science": {
+        "Operations Research and Management (ORMS) is an impacted (\"capped\") major.  Due to very high demand, special restrictions on declaration of the major are in effect.  Transfer students must apply during their first semester.  Non-transfer students must apply prior to exceeding 80 units of post-high school coursework.  See the department website for details.": [
+            "Mathematics", 
+            "Statistics", 
+            "Economics", 
+            "Environmental Economics & Policy", 
+            "Political Science"
+        ]
+    }, 
+    "Peace and Conflict Studies": {
+        "The Peace and Conflict Studies (PACS) major involves the systematic and interdisciplinary analysis of confrontation and cooperation among individuals, groups and nations.  The curriculum addresses issues of social injustice, poverty, and ecological deterioration as they relate to war and explores the social, psychological, economic and political dimensions of conflict resolution. \r\t\t\t\t\t": [
+            "Development Studies", 
+            "Political Economy", 
+            "Religious Studies", 
+            "Philosophy", 
+            "Environmental Economics & Policy "
+        ]
+    }, 
+    "Philosophy": {
+        "The curriculum in philosophy provides a broad general understanding of the work of major figures in the history of philosophy. Students gain familiarity with topics centering on contemporary philosophical thought, ethics, political philosophy, and logic. Students are also trained to think analytically and creatively about philosophical texts and issues, and express and defend their own ideas, orally and in writing.\r\t\t\t\t\t": [
+            "Religious Studies", 
+            "German", 
+            "Peace & Conflict Studies ", 
+            "Rhetoric", 
+            "Classics", 
+            "Mathematics"
+        ]
+    }, 
+    "Physics": {
+        "Physics is the study of the universe, from the very large (star formation, cosmic microwave background radiation) to the very small (nanotechnology, atomic cooling and trapping, string theory), and everything in between (biophysics, and the physics of solid state devices).  The Physics major at Berkeley provides a broad and solid background in fundamental physics through introductory course work, and, for those interested in current research, an opportunity to work with some of the top research groups worldwide.": [
+            "Astrophysics", 
+            "Earth & Planetary Science", 
+            "Geography", 
+            "Chemistry"
+        ]
+    }, 
+    "Political Economy": {
+        "The interdisciplinary major in Political Economy examines the relationship between politics and economics in modern societies, focusing special attention on problems of domestic and international policy.  Although there is a strong historical perspective to the major, contemporary problems form its central focus.  Students create their own concentrations around a theme or geographical region.": [
+            "Political Science", 
+            "Environmental Economics & Policy", 
+            "Interdisciplinary Studies", 
+            "Sociology"
+        ]
+    }, 
+    "Political Science": {
+        "Political science is the study of power in the operation of human society. Students in the major explore the history of key political ideas, the impact of different forces on the operation of politics, the US political system, the diversity of political systems around the world, and the causes of war and peace. \n\t\t\t\t\t": [
+            "Classics", 
+            "Rhetoric", 
+            "Philosophy", 
+            "History", 
+            "Legal Studies", 
+            "Statistics"
+        ]
+    }, 
+    "Practice of Art": {
+        "Practice of Art is an impacted (\"capped\") major. Due to very high demand, special restrictions on declaration of the major are in effect. Transfer students must apply during their first semester. Non-transfer students must apply prior to exceeding 80 units of post-high school coursework. See the department website for details.": [
+            "History of Art", 
+            "Interdisciplinary Studies"
+        ]
+    }, 
+    "Psychology": {
+        "Psychology is an impacted (\"capped\") major. Due to very high demand, special restrictions on declaration of the major are in effect. Transfer students must apply during their first semester. Non-transfer students must apply prior to exceeding 80 units of post-high school coursework. See the department website for details.": [
+            "Integrative Biology", 
+            "Cognitive Science", 
+            "Religious Studies", 
+            "Linguistics", 
+            "Sociology", 
+            "Anthropology"
+        ]
+    }, 
+    "Public Health": {
+        "Public Health is an impacted (\"capped\") major that restricts admission due to very high student interest and demand.  Transfer students must apply during their first semester.  Non-transfer students must apply prior to exceeding 80 units of post-high school coursework.  See the department website for details.\r": [
+            "Social Welfare", 
+            "Ethnic Studies", 
+            "Gender & Women's Studies", 
+            "Sociology", 
+            "Interdisciplinary Studies", 
+            "Environmental Economics & Policy", 
+            "Integrative Biology"
+        ]
+    }, 
+    "Religious Studies": {
+        "The Religious Studies major at Berkeley examines religion from a global perspective with a focus on a thematic concern or a particular religious tradition.  The major is open to anyone interested in studying religion and related phenomena academically.  It is not directed particularly to those who have a religious background or who might wish to pursue a religious vocation.  Students will be challenged to regard religious traditions as both means and objects of intellectual inquiry and to regard their claims both appreciatively and critically.\r\t\t\t\t\t": [
+            "Classics", 
+            "Philosophy", 
+            "History of Art", 
+            "Peace & Conflict Studies", 
+            "Rhetoric", 
+            "Psychology"
+        ]
+    }, 
+    "Rhetoric": {
+        "In the broadest sense, the Rhetoric major concerns human discourse as it relates to persuasion. Rhetoric at Berkeley is grounded in argumentation and the analysis of the symbolic and institutional dimensions of discourse, from both a practical and historical perspective. This includes special attention to logic, style, figurative speech, and image. Students in the major focus on one of the following: History and Theory of Rhetoric, Public Discourse, and Narrative and Image. \r\t\t\t\t\t": [
+            "Classics", 
+            "Religious Studies", 
+            "Italian Studies", 
+            "Philosophy", 
+            "Legal Studies", 
+            "Media Studies"
+        ]
+    }, 
+    "Scandinavian": {
+        "Majors in the Department of Scandinavian provide an understanding of the linguistic, historical, and cultural relationships that join and divide the nations and peoples of the Nordic region. Students explore the trajectory of Nordic literature from the Middle Ages to contemporary times, and achieve competence in one of the four modern Nordic languages (Danish, Finnish, Norwegian, and Swedish).\r\r\t\t\t\t\t": [
+            "Celtic Studies", 
+            "Classics", 
+            "Comparative Literature", 
+            "Film", 
+            "German", 
+            "Theater and Performance Studies"
+        ]
+    }, 
+    "Slavic Languages and Literatures": {
+        "The Department of Slavic Languages and Literatures provides instruction on the culture of Russia as well as Slavic and Western Asia regions.  The three different major tracks include Russian/East European/Eurasian Cultures; Russian Language and Literature; and Czech, Polish, or Bosnian/Croatian/Serbian. Students pursue an multidisciplinary course of study that encompasses film, drama, visual arts, popular culture, critical theory, religious thought, and cultural history.\r\r\t\t\t\t\t": [
+            "Geography", 
+            "History of Art", 
+            "Religious Studies", 
+            "Comparative Literature", 
+            "Linguistics", 
+            "History"
+        ]
+    }, 
+    "Social Welfare": {
+        "Social Welfare is an impacted (\"capped\") major. Due to very high demand, special restrictions on declaration of the major are in effect. Transfer students must apply during their first semester. Non-transfer students must apply prior to exceeding 80 units of post-high school coursework. See the department website for details.": [
+            "Sociology", 
+            "Legal Studies", 
+            "Ethnic Studies", 
+            "Gender & Women's Studies", 
+            "Anthropology", 
+            "Interdisciplinary Studies"
+        ]
+    }, 
+    "Sociology": {
+        "Sociology is the scientific study of human society and social behavior, from the interpersonal level to the international.  Sociologists at Berkeley study social psychology, sex roles, the family, deviance, race and ethnic relations, demography, urban sociology, social change, social theory, political sociology, and the societies of specific nations and regions.\r\t\t\t\t\t": [
+            "Geography", 
+            "Statistics", 
+            "Philosophy", 
+            "Gender & Women's Studies", 
+            "Ethnic Studies", 
+            "Anthropology"
+        ]
+    }, 
+    "Southern and Southeastern Asian Studies": {
+        "The South & Southeast Asian Studies major offers a choice of two tracks; one in civilizations and the other in languages and literatures of countries in the region. Students work closely with faculty and staff advisers to develop an interdisciplinary curriculum that include a wide and comparative study of South & Southeast Asian cultures, as well as a more focused concentration on their particular area of interest.  \r\t\t\t\t\t": [
+            "Geography", 
+            "Philosophy", 
+            "Religious Studies", 
+            "Development Studies", 
+            "Interdisciplinary Studies"
+        ]
+    }, 
+    "Spanish and Portuguese": {
+        "The undergraduate program in the Department of Spanish and Portuguese is designed to develop competence in written and spoken Spanish or Portuguese through study of the structure and history of one or both languages, and a critical understanding of the development of their literatures in the Old World and the New. The faculty strive to maintain a balance between language and literature, and between colonial and Latin American facets of a unified field.\r\t\t\t\t\t": [
+            "Chicano Studies", 
+            "Ethnic Studies", 
+            "Latin American Studies", 
+            "Development Studies", 
+            "American Studies"
+        ]
+    }, 
+    "Statistics": {
+        "The Statistics at Berkeley provides a systematic and thorough grounding in applied and theoretical statistics, and in probability.  The program is an excellent preparation for a career in science, in industry, or as a preparation for further academic study in a wide variety of fields. It is also very useful to combine studies of statistics and probability with other subjects.\r\t\t\t\t\t": [
+            "Public Health", 
+            "Mathematics", 
+            "Economics", 
+            "Sociology", 
+            "Psychology"
+        ]
+    }, 
+    "Theater, Dance, and Performance Studies": {
+        "The Department of Theater, Dance, and Performance Studies offers a major in either theater or dance. Both majors emphasize the methodological rigor of the study of performance that sets the literary, historical, theoretical, and cultural traditions of performance in dialogue with other arts and humanities disciplines. In addition students choose intensive work in acting, design, directing, technical production, choreography, or modern dance technique.": [
+            "Film", 
+            "Rhetoric", 
+            "English"
+        ]
+    }
+}
