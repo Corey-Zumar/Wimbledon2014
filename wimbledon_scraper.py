@@ -3,6 +3,7 @@ from urllib.request import urlopen
 from urllib.request import HTTPError
 import urllib
 import json
+from datetime import datetime
 
 def get_2014_round_one():
 	matches = []
@@ -152,53 +153,155 @@ def get_formatted_name(name):
 	return first_name + " " + last_name
 
 
+def load_json(filename):
+	opened_file = open(filename)
+	raw = opened_file.read()
+	opened_file.close()
+	return json.loads(raw)
+
 def get_soup(url):
 	page = urlopen(url)
 	source = page.read()
 	page.close()
 	return BeautifulSoup(source)
 
-def get_matchstat_ids_for_years(start_year, end_year):
-	for i in range(start_year, end_year + 1):
-		get_matchstat_ids(i, get_draw(i))
+def load_draw(year):
+	filename = 'wimbledon_draw_' + str(year) + '.txt'
+	return load_json(filename)
 
-def get_matchstat_ids(year, draw):
-	players_file = open('players.txt')
+def get_h2h_prediction_accuracy(start_year, end_year):
+	h2h_total = 0
+	h2h_accurate = 0
+	for year in range(start_year, end_year + 1):
+		draw = load_draw(year)
+		for i in range(1, 8):
+			round = draw[str(i)]
+			for match in round:
+				player_one = match['player_1']
+				player_one_h2h = match['player_1_h2h']
+				player_two = match['player_2']
+				player_two_h2h = match['player_2_h2h']
+				winner = match['winner']
+				if player_one_h2h != player_two_h2h and (player_one_h2h > 0 or player_two_h2h) > 0:
+					h2h_total += 1
+					if player_one_h2h > player_two_h2h and winner == player_one or player_two_h2h > player_one_h2h and winner == player_two:
+						h2h_accurate += 1
+	return('Total head-to-heads: ' + str(h2h_total) + '\nAccurate head-to-heads: ' + str(h2h_accurate) + '\nPercentage' + str((h2h_accurate / h2h_total)))
+
+def load_tournaments_file():
+	return load_json('tournaments.txt')
+
+
+def get_tournament_date(tournaments, name, url):
+	if name not in tournaments:
+		if len(url) > 1:
+			tournament_url = 'http://www.atpworldtour.com' + url
+			tournament_soup = get_soup(tournament_url)
+			date = ''
+			for item in tournament_soup.find_all('li'):
+				strong = item.find('strong')
+				if  strong != None and strong.text == "Date:":
+					date = item.text[6:]
+			tournaments[name] = date[:date.index('-')]
+			tournaments_file = open('tournaments.txt', 'w')
+			tournaments_file.write(json.dumps(tournaments, indent=4, sort_keys=True))
+			tournaments_file.close()
+			return date[:date.index('-')]
+		else:
+			return '31.12.2014'
+	else:
+		return tournaments[name]
+
+
+
+def update_draws_with_h2h(start_year, end_year):
+	for year in range(start_year, end_year + 1):
+		ids_dict = json.loads(load_atp_ids_file())
+		draw = load_draw(year)
+		for i in range(1, 8):
+			curr_round = draw[str(i)]
+			for match in curr_round:
+				h2h = get_head_to_head(ids_dict, year, match['player_1'], match['player_2'])
+				match['player_1_h2h'] = h2h[0]
+				match['player_2_h2h'] = h2h[1]
+		write_draw(year, draw)
+
+
+def get_head_to_head(ids_dict, year, player_one, player_two):
+	tournaments_dict = load_tournaments_file()
+	date_format = '%d.%m.%Y'
+	wimbledon_date = datetime.strptime('23.06.2014', date_format)
+	url = 'http://www.atpworldtour.com/Players/Head-To-Head.aspx?pId=' + ids_dict[player_one] + '&oId=' + ids_dict[player_two]
+	print('Accessing ' + url)
+	h2h_soup = get_soup(url)
+	strongs = h2h_soup.find_all('strong')
+	tournaments = []
+	for link in h2h_soup.find_all('a'):
+		if ('/Tennis/Tournaments/' in link['href'] or link['href'] == '#') and link.find('strong') != None:
+			tournaments.append((link.text, link['href']))
+	i = 0
+	x = 0
+	player_one_count = 0
+	player_two_count = 0
+	while i < len(strongs) and x < len(tournaments):
+		tournament = tournaments[x]
+		tournament_name = tournament[0]
+		tournament_url = tournament[1]
+		date_string = get_tournament_date(tournaments_dict, tournament_name, tournament_url)
+		date = datetime.strptime(date_string, date_format)
+		match_year = int(strongs[i].text)
+		if match_year < year or match_year == year and date < wimbledon_date:
+			winner = strongs[i+2].text
+			formatted_winner = get_formatted_name(winner)
+			if formatted_winner == player_one:
+				player_one_count += 1
+			elif formatted_winner == player_two:
+				player_two_count += 1
+		x += 1
+		i += 3
+	return (player_one_count, player_two_count)
+
+def get_atp_ids_for_years(start_year, end_year):
+	for i in range(start_year, end_year + 1):
+		get_atp_ids(get_draw(i))
+
+def load_atp_ids_file():
+	players_file = open('players_atp.txt')
 	players = players_file.read()
 	players_file.close()
-	matchstat_ids = {}
+	return players
+
+def get_atp_ids(draw):
+	base_url = 'http://www.atpworldtour.com/Handlers/AutoComplete.aspx?q='
+	players = load_atp_ids_file()
+	atp_ids = {}
 	try:
-		matchstat_ids = json.loads(players)
+		atp_ids = json.loads(players)
 	except Exception as e:
 		print(e)
-		matchstat_ids = {}
-
-	round_one = draw[1] #First round contains all players in the draw
+		atp_ids = {}
+	round_one = draw[1]
 	for match in round_one:
 		player_1 = match['player_1']
 		player_2 = match['player_2']
-		if player_1 not in matchstat_ids:
-			matchstat_ids[player_1] = get_matchstat_id(player_1)
-		if player_2 not in matchstat_ids:
-			matchstat_ids[player_2] = get_matchstat_id(player_2)
-	
-	players_file = open('players.txt', 'w')
-	players_file.write(json.dumps(matchstat_ids, indent=4, sort_keys=True))
+		if player_1 not in atp_ids:
+			request_url = base_url + urllib.parse.quote_plus(player_1)
+			print('Accessing ' + request_url)
+			id_data = make_json_request(request_url)
+			atp_ids[player_1] = id_data[0]['pid']
+		if player_2 not in atp_ids:
+			request_url = base_url + urllib.parse.quote_plus(player_2)
+			print('Accessing ' + request_url)
+			id_data = make_json_request(request_url)
+			atp_ids[player_2] = id_data[0]['pid']
+
+	players_file = open('players_atp.txt', 'w')
+	players_file.write(json.dumps(atp_ids, indent=4, sort_keys=True))
 	players_file.close()
 
-def get_matchstat_id(player):
-	base_url = 'http://tennis.matchstat.com/Player/'
-	url = base_url + urllib.parse.quote_plus(player)
-	print('Accessing: ' + url)
-	player_profile_soup = get_soup(url)
-	for link in player_profile_soup.find_all('a'):
-		href = link['href']
-		href_len = len(href)
-		if '/Compare/' in href and href_len > 9 and href_len < 16:
-			return parse_id(href)
+def make_json_request(url):
+	response_text = urlopen(url).read().decode('utf-8')
+	return json.loads(response_text)
 
-def parse_id(href):
-	return href[9:]
-
-def get_head_to_head(year, player_one, player_two):
-	returnge
+def get_player_stats(year, player_name):
+	
