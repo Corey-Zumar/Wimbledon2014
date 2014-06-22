@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from urllib.request import HTTPError
+import urllib
 import json
 
 def get_2014_round_one():
@@ -24,9 +25,13 @@ def get_2014_round_one():
 					prev_name = None
 	list_matches(matches)
 
-def get_draws_last_ten_years():
-	for i in range(2003, 2014):
+def get_draws(start_year, end_year):
+	for i in range(start_year, end_year + 1):
+		print('Getting draw for ' + str(i))
 		write_draw(i, get_draw(i))
+
+def get_draws_last_ten_years():
+	get_draws(2003, 2013)
 
 def write_draw(year, draw):
 	info_file = open('wimbledon_draw_' + str(year) + '.txt', 'w')
@@ -152,3 +157,48 @@ def get_soup(url):
 	source = page.read()
 	page.close()
 	return BeautifulSoup(source)
+
+def get_matchstat_ids_for_years(start_year, end_year):
+	for i in range(start_year, end_year + 1):
+		get_matchstat_ids(i, get_draw(i))
+
+def get_matchstat_ids(year, draw):
+	players_file = open('players.txt')
+	players = players_file.read()
+	players_file.close()
+	matchstat_ids = {}
+	try:
+		matchstat_ids = json.loads(players)
+	except Exception as e:
+		print(e)
+		matchstat_ids = {}
+
+	round_one = draw[1] #First round contains all players in the draw
+	for match in round_one:
+		player_1 = match['player_1']
+		player_2 = match['player_2']
+		if player_1 not in matchstat_ids:
+			matchstat_ids[player_1] = get_matchstat_id(player_1)
+		if player_2 not in matchstat_ids:
+			matchstat_ids[player_2] = get_matchstat_id(player_2)
+	
+	players_file = open('players.txt', 'w')
+	players_file.write(json.dumps(matchstat_ids, indent=4, sort_keys=True))
+	players_file.close()
+
+def get_matchstat_id(player):
+	base_url = 'http://tennis.matchstat.com/Player/'
+	url = base_url + urllib.parse.quote_plus(player)
+	print('Accessing: ' + url)
+	player_profile_soup = get_soup(url)
+	for link in player_profile_soup.find_all('a'):
+		href = link['href']
+		href_len = len(href)
+		if '/Compare/' in href and href_len > 9 and href_len < 16:
+			return parse_id(href)
+
+def parse_id(href):
+	return href[9:]
+
+def get_head_to_head(year, player_one, player_two):
+	returnge
