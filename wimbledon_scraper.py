@@ -169,7 +169,28 @@ def load_draw(year):
 	filename = 'wimbledon_draw_' + str(year) + '.txt'
 	return load_json(filename)
 
+def get_most_accurate_h2h_year():
+	most_accurate_year = 0
+	highest_accuracy = 0
+	for year in range(1993, 2014):
+		accuracy = get_h2h_prediction_accuracy(year, year)
+		if accuracy > highest_accuracy:
+			highest_accuracy = accuracy
+			most_accurate_year = year
+	return 'Year: ' + str(most_accurate_year) + ' Accuracy: ' + str(highest_accuracy)
+
+def get_least_accurate_h2h_year():
+	least_accurate_year = 0
+	lowest_accuracy = 100
+	for year in range(1993, 2014):
+		accuracy = get_h2h_prediction_accuracy(year, year)
+		if accuracy < lowest_accuracy:
+			lowest_accuracy = accuracy
+			least_accurate_year = year
+	return 'Year: ' + str(least_accurate_year) + ' Accuracy: ' + str(lowest_accuracy)
+
 def get_h2h_prediction_accuracy(start_year, end_year):
+	matches = 0
 	h2h_total = 0
 	h2h_accurate = 0
 	for year in range(start_year, end_year + 1):
@@ -177,6 +198,7 @@ def get_h2h_prediction_accuracy(start_year, end_year):
 		for i in range(1, 8):
 			round = draw[str(i)]
 			for match in round:
+				matches += 1
 				player_one = match['player_1']
 				player_one_h2h = match['player_1_h2h']
 				player_two = match['player_2']
@@ -186,7 +208,13 @@ def get_h2h_prediction_accuracy(start_year, end_year):
 					h2h_total += 1
 					if player_one_h2h > player_two_h2h and winner == player_one or player_two_h2h > player_one_h2h and winner == player_two:
 						h2h_accurate += 1
-	return('Total head-to-heads: ' + str(h2h_total) + '\nAccurate head-to-heads: ' + str(h2h_accurate) + '\nPercentage' + str((h2h_accurate / h2h_total)))
+
+	print('Total matches: ' + str(matches))
+	print('Total significant head-to-heads: ' + str(h2h_total))
+	print('Percentage: ' + str(h2h_total / matches))
+	print('Accurate head-to-heads: ' + str(h2h_accurate))
+	print('Percentage: ' + str(h2h_accurate / h2h_total))
+	return (h2h_accurate / h2h_total)
 
 def load_tournaments_file():
 	return load_json('tournaments.txt')
@@ -214,20 +242,25 @@ def get_tournament_date(tournaments, name, url):
 
 
 
-def update_draws_with_h2h(start_year, end_year):
+def update_draws_with_h2h(start_year, end_year, surface):
+	ids_dict = json.loads(load_atp_ids_file())
 	for year in range(start_year, end_year + 1):
-		ids_dict = json.loads(load_atp_ids_file())
 		draw = load_draw(year)
 		for i in range(1, 8):
 			curr_round = draw[str(i)]
 			for match in curr_round:
-				h2h = get_head_to_head(ids_dict, year, match['player_1'], match['player_2'])
-				match['player_1_h2h'] = h2h[0]
-				match['player_2_h2h'] = h2h[1]
+				h2h = get_head_to_head(ids_dict, year, surface, match['player_1'], match['player_2'])
+				if surface is None:
+					match['player_1_h2h'] = h2h[0]
+					match['player_2_h2h'] = h2h[1]
+				else:
+					match['player_1_h2h_' + surface] = h2h[0]
+					match['player_2_h2h_' + surface] = h2h[1]
 		write_draw(year, draw)
 
+surfaces = ['Hard', 'Clay', 'Grass', 'Carpet']
 
-def get_head_to_head(ids_dict, year, player_one, player_two):
+def get_head_to_head(ids_dict, year, surface, player_one, player_two):
 	tournaments_dict = load_tournaments_file()
 	date_format = '%d.%m.%Y'
 	wimbledon_date = datetime.strptime('23.06.2014', date_format)
@@ -239,6 +272,10 @@ def get_head_to_head(ids_dict, year, player_one, player_two):
 	for link in h2h_soup.find_all('a'):
 		if ('/Tennis/Tournaments/' in link['href'] or link['href'] == '#') and link.find('strong') != None:
 			tournaments.append((link.text, link['href']))
+	h2h_surfaces = []
+	for td in h2h_soup.find_all('td'):
+		if td.text in surfaces:
+			h2h_surfaces.append(td.text)
 	i = 0
 	x = 0
 	player_one_count = 0
@@ -250,7 +287,8 @@ def get_head_to_head(ids_dict, year, player_one, player_two):
 		date_string = get_tournament_date(tournaments_dict, tournament_name, tournament_url)
 		date = datetime.strptime(date_string, date_format)
 		match_year = int(strongs[i].text)
-		if match_year < year or match_year == year and date < wimbledon_date:
+		match_surface = h2h_surfaces[x]
+		if (match_year < year or match_year == year and date < wimbledon_date) and (surface is None or match_surface == surface):
 			winner = strongs[i+2].text
 			formatted_winner = get_formatted_name(winner)
 			if formatted_winner == player_one:
@@ -302,6 +340,3 @@ def get_atp_ids(draw):
 def make_json_request(url):
 	response_text = urlopen(url).read().decode('utf-8')
 	return json.loads(response_text)
-
-def get_player_stats(year, player_name):
-	
