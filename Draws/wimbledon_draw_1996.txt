@@ -2,448 +2,576 @@
     "1": [
         {
             "player_1": "Pete Sampras", 
+            "player_1_h2h": 4, 
             "player_2": "Richey Reneberg", 
+            "player_2_h2h": 2, 
             "round": 1, 
             "score": "7-5, 4-6, 6-3, 6-2", 
             "winner": "Pete Sampras"
         }, 
         {
             "player_1": "Mark Philippoussis", 
+            "player_1_h2h": 0, 
             "player_2": "Javier Frana", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-5, 4-6, 6-3, 6-2", 
             "winner": "Mark Philippoussis"
         }, 
         {
             "player_1": "Kris Goossens", 
+            "player_1_h2h": 0, 
             "player_2": "Byron Black", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "5-7, 6-1, 6-2, 6-3", 
             "winner": "Byron Black"
         }, 
         {
             "player_1": "Karim Alami", 
+            "player_1_h2h": 0, 
             "player_2": "Karol Kucera", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-3, 6-3, 6-3", 
             "winner": "Karol Kucera"
         }, 
         {
             "player_1": "Jan Kroslak", 
+            "player_1_h2h": 0, 
             "player_2": "Andrew Foster", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-3, 7-6(4), 7-5", 
             "winner": "Jan Kroslak"
         }, 
         {
             "player_1": "Chris Wilkinson", 
+            "player_1_h2h": 0, 
             "player_2": "Anders Jarryd", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-1, 6-3, 5-7, 6-2", 
             "winner": "Chris Wilkinson"
         }, 
         {
             "player_1": "Leander Paes", 
+            "player_1_h2h": 1, 
             "player_2": "Mark Petchey", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "1-6, 6-2, 6-4, 7-6(11)", 
             "winner": "Mark Petchey"
         }, 
         {
             "player_1": "Jan Siemerink", 
+            "player_1_h2h": 2, 
             "player_2": "Cedric Pioline", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-6(4), 7-6(5), 6-4", 
             "winner": "Cedric Pioline"
         }, 
         {
             "player_1": "Michael Stich", 
+            "player_1_h2h": 1, 
             "player_2": "Sjeng Schalken", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-3, 3-6, 6-1, 6-2", 
             "winner": "Michael Stich"
         }, 
         {
             "player_1": "Christian Ruud", 
+            "player_1_h2h": 0, 
             "player_2": "Shuzo Matsuoka", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-1, 6-0, 6-2", 
             "winner": "Shuzo Matsuoka"
         }, 
         {
             "player_1": "Sandon Stolle", 
+            "player_1_h2h": 0, 
             "player_2": "Diego Nargiso", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-3, 6-3, 6-1", 
             "winner": "Sandon Stolle"
         }, 
         {
             "player_1": "Mark Woodforde", 
+            "player_1_h2h": 1, 
             "player_2": "Magnus Larsson", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "6-3, 6-2, 7-5", 
             "winner": "Magnus Larsson"
         }, 
         {
             "player_1": "Daniel Nestor", 
+            "player_1_h2h": 0, 
             "player_2": "Greg Rusedski", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "7-6(4), 7-6(5), 6-2", 
             "winner": "Greg Rusedski"
         }, 
         {
             "player_1": "Tom Kempers", 
+            "player_1_h2h": 0, 
             "player_2": "Brett Steven", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-5, 7-6(7), 6-3", 
             "winner": "Brett Steven"
         }, 
         {
             "player_1": "Derrick Rostagno", 
+            "player_1_h2h": 0, 
             "player_2": "Johan Van Herck", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-4, 6-3, 7-6(4)", 
             "winner": "Derrick Rostagno"
         }, 
         {
             "player_1": "Javier Sanchez", 
+            "player_1_h2h": 0, 
             "player_2": "Richard Krajicek", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-4, 6-3, 6-4", 
             "winner": "Richard Krajicek"
         }, 
         {
             "player_1": "Goran Ivanisevic", 
+            "player_1_h2h": 0, 
             "player_2": "David Nainkin", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-2, 6-0, 6-2", 
             "winner": "Goran Ivanisevic"
         }, 
         {
             "player_1": "Pierre Bouteyre", 
+            "player_1_h2h": 0, 
             "player_2": "Carlos Moya", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-7(5), 7-6(5), 2-6, 6-4, 10-8", 
             "winner": "Pierre Bouteyre"
         }, 
         {
             "player_1": "Lorenzo Manta", 
+            "player_1_h2h": 0, 
             "player_2": "Alexander Volkov", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-4, 7-6(2), 1-6, 6-1", 
             "winner": "Alexander Volkov"
         }, 
         {
             "player_1": "Oleg Ogorodov", 
+            "player_1_h2h": 0, 
             "player_2": "Martin Damm", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "4-6, 6-1, 6-4, 6-4", 
             "winner": "Martin Damm"
         }, 
         {
             "player_1": "Gianluca Pozzi", 
+            "player_1_h2h": 2, 
             "player_2": "Joao Cunha-Silva", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-2, 6-4, 6-2", 
             "winner": "Gianluca Pozzi"
         }, 
         {
             "player_1": "Patrick Rafter", 
+            "player_1_h2h": 0, 
             "player_2": "Daniel Vacek", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-2, 6-4, 7-6(3)", 
             "winner": "Patrick Rafter"
         }, 
         {
             "player_1": "Andrei Olhovskiy", 
+            "player_1_h2h": 0, 
             "player_2": "Hendrik Dreekmann", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-7(4), 6-2, 6-2, 6-2", 
             "winner": "Andrei Olhovskiy"
         }, 
         {
             "player_1": "Scott Draper", 
+            "player_1_h2h": 0, 
             "player_2": "Marc Rosset", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "4-6, 6-4, 6-3, 6-1", 
             "winner": "Marc Rosset"
         }, 
         {
             "player_1": "Stefan Edberg", 
+            "player_1_h2h": 5, 
             "player_2": "Guy Forget", 
+            "player_2_h2h": 6, 
             "round": 1, 
             "score": "7-6(5), 5-7, 6-2, 6-2", 
             "winner": "Stefan Edberg"
         }, 
         {
             "player_1": "Mikael Tillstrom", 
+            "player_1_h2h": 1, 
             "player_2": "Marc-Kevin Goellner", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-6(5), 3-6, 6-3, 3-6, 12-10", 
             "winner": "Mikael Tillstrom"
         }, 
         {
             "player_1": "Michael Tebbutt", 
+            "player_1_h2h": 0, 
             "player_2": "Alex Corretja", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "3-6, 7-6(4), 6-4, 6-4", 
             "winner": "Alex Corretja"
         }, 
         {
             "player_1": "Andrei Chesnokov", 
+            "player_1_h2h": 3, 
             "player_2": "Jakob Hlasek", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "6-3, 6-2, 6-3", 
             "winner": "Jakob Hlasek"
         }, 
         {
             "player_1": "Joern Renzenbrink", 
+            "player_1_h2h": 0, 
             "player_2": "Jiri Novak", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-6(5), 6-2, 6-4", 
             "winner": "Jiri Novak"
         }, 
         {
             "player_1": "Jason Stoltenberg", 
+            "player_1_h2h": 0, 
             "player_2": "Adrian Voinea", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "4-6, 6-4, 5-7, 6-2, 6-0", 
             "winner": "Jason Stoltenberg"
         }, 
         {
             "player_1": "Mose Navarra", 
+            "player_1_h2h": 0, 
             "player_2": "David Rikl", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "4-6, 6-2, 6-2, 6-2", 
             "winner": "Mose Navarra"
         }, 
         {
             "player_1": "Albert Costa", 
+            "player_1_h2h": 0, 
             "player_2": "Michael Chang", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "3-6, 7-6(5), 7-6(1), 6-4", 
             "winner": "Albert Costa"
         }, 
         {
             "player_1": "Yevgeny Kafelnikov", 
+            "player_1_h2h": 2, 
             "player_2": "Tim Henman", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-6(6), 6-3, 6-7(2), 4-6, 7-5", 
             "winner": "Tim Henman"
         }, 
         {
             "player_1": "Peter Tramacchi", 
+            "player_1_h2h": 0, 
             "player_2": "Danny Sapsford", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-5, 6-4, 6-3", 
             "winner": "Danny Sapsford"
         }, 
         {
             "player_1": "Jonas Bjorkman", 
+            "player_1_h2h": 0, 
             "player_2": "Luke Milligan", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "4-6, 6-1, 2-6, 7-5, 6-4", 
             "winner": "Luke Milligan"
         }, 
         {
             "player_1": "Kenneth Carlsen", 
+            "player_1_h2h": 0, 
             "player_2": "Nicolas Lapentti", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-6(3), 3-6, 6-7(6), 6-4, 6-4", 
             "winner": "Nicolas Lapentti"
         }, 
         {
             "player_1": "Todd Woodbridge", 
+            "player_1_h2h": 0, 
             "player_2": "Stephane Huet", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-4, 6-2, 3-6, 6-0", 
             "winner": "Todd Woodbridge"
         }, 
         {
             "player_1": "Magnus Gustafsson", 
+            "player_1_h2h": 0, 
             "player_2": "Andrew Ilie", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-6(4), 6-3, 6-2", 
             "winner": "Magnus Gustafsson"
         }, 
         {
             "player_1": "Michael Joyce", 
+            "player_1_h2h": 0, 
             "player_2": "Andrea Gaudenzi", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "1-6, 6-2, 5-7, 6-1, 6-3", 
             "winner": "Andrea Gaudenzi"
         }, 
         {
             "player_1": "David Prinosil", 
+            "player_1_h2h": 0, 
             "player_2": "Wayne Ferreira", 
+            "player_2_h2h": 2, 
             "round": 1, 
             "score": "7-6(6), 6-3, 6-3", 
             "winner": "Wayne Ferreira"
         }, 
         {
             "player_1": "Todd Martin", 
+            "player_1_h2h": 2, 
             "player_2": "Marcos Ondruska", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-3, 6-4, 6-3", 
             "winner": "Todd Martin"
         }, 
         {
             "player_1": "Emilio Sanchez", 
+            "player_1_h2h": 0, 
             "player_2": "Jim Grabb", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "6-1, 6-3, 6-3", 
             "winner": "Jim Grabb"
         }, 
         {
             "player_1": "Renzo Furlan", 
+            "player_1_h2h": 2, 
             "player_2": "Andrei Medvedev", 
+            "player_2_h2h": 2, 
             "round": 1, 
             "score": "6-4, 3-6, 6-4, 6-2, 6-2", 
             "winner": "Renzo Furlan"
         }, 
         {
             "player_1": "Colin Beecher", 
+            "player_1_h2h": 0, 
             "player_2": "Nick Gould", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-4, 6-4, 7-5", 
             "winner": "Colin Beecher"
         }, 
         {
             "player_1": "Hicham Arazi", 
+            "player_1_h2h": 0, 
             "player_2": "Nicklas Kulti", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "4-6, 6-7(4), 6-4, 6-2, 6-3", 
             "winner": "Hicham Arazi"
         }, 
         {
             "player_1": "Thomas Johansson", 
+            "player_1_h2h": 1, 
             "player_2": "Jacco Eltingh", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "4-6, 7-6(0), 6-3, 3-6, 6-1", 
             "winner": "Thomas Johansson"
         }, 
         {
             "player_1": "Jared Palmer", 
+            "player_1_h2h": 0, 
             "player_2": "Thierry Champion", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-2, 6-4, 6-7(5), 6-3", 
             "winner": "Jared Palmer"
         }, 
         {
             "player_1": "Doug Flach", 
+            "player_1_h2h": 0, 
             "player_2": "Andre Agassi", 
+            "player_2_h2h": 2, 
             "round": 1, 
             "score": "2-6, 7-6(1), 6-4, 7-6(6)", 
             "winner": "Doug Flach"
         }, 
         {
             "player_1": "Jim Courier", 
+            "player_1_h2h": 2, 
             "player_2": "Jonathan Stark", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "6-2, 6-4, 3-6, 6-4", 
             "winner": "Jonathan Stark"
         }, 
         {
             "player_1": "Mark Knowles", 
+            "player_1_h2h": 0, 
             "player_2": "Jerome Golmard", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-2, 6-4, 3-6, 6-4", 
             "winner": "Mark Knowles"
         }, 
         {
             "player_1": "Felix Mantilla", 
+            "player_1_h2h": 0, 
             "player_2": "Paul Haarhuis", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "5-7, 6-2, 6-2, 6-2", 
             "winner": "Paul Haarhuis"
         }, 
         {
             "player_1": "Jeremy Bates", 
+            "player_1_h2h": 0, 
             "player_2": "Nicolas Pereira", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-2, 6-3, 6-4", 
             "winner": "Nicolas Pereira"
         }, 
         {
             "player_1": "Bohdan Ulihrach", 
+            "player_1_h2h": 0, 
             "player_2": "Carlos Costa", 
+            "player_2_h2h": 2, 
             "round": 1, 
             "score": "1-6, 6-3, 6-2, 6-3", 
             "winner": "Bohdan Ulihrach"
         }, 
         {
             "player_1": "Filip Dewulf", 
+            "player_1_h2h": 1, 
             "player_2": "Vincent Spadea", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "3-6, 6-3, 7-5, 6-4", 
             "winner": "Filip Dewulf"
         }, 
         {
             "player_1": "Richard Fromberg", 
+            "player_1_h2h": 0, 
             "player_2": "MaliVai Washington", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "6-3, 7-6(6), 6-7(3), 7-5", 
             "winner": "MaliVai Washington"
         }, 
         {
             "player_1": "Albert Chang", 
+            "player_1_h2h": 0, 
             "player_2": "Thomas Enqvist", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-4, 6-2, 6-1", 
             "winner": "Thomas Enqvist"
         }, 
         {
             "player_1": "Arnaud Boetsch", 
+            "player_1_h2h": 1, 
             "player_2": "Alex Radulescu", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-3, 6-4, 6-7(2), 5-7, 9-7", 
             "winner": "Alex Radulescu"
         }, 
         {
             "player_1": "Stefano Pescosolido", 
+            "player_1_h2h": 1, 
             "player_2": "Chris Woodruff", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-3, 3-6, 6-2, 7-6", 
             "winner": "Stefano Pescosolido"
         }, 
         {
             "player_1": "David Wheaton", 
+            "player_1_h2h": 0, 
             "player_2": "Frederik Fetterlein", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "6-1, 6-4, 6-4", 
             "winner": "David Wheaton"
         }, 
         {
             "player_1": "Guillaume Raoux", 
+            "player_1_h2h": 0, 
             "player_2": "Younes El Aynaoui", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "6-3, 6-1, 6-3", 
             "winner": "Guillaume Raoux"
         }, 
         {
             "player_1": "Grant Stafford", 
+            "player_1_h2h": 0, 
             "player_2": "Sandor Noszaly", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-5, 6-1, 6-2", 
             "winner": "Grant Stafford"
         }, 
         {
             "player_1": "Neville Godwin", 
+            "player_1_h2h": 0, 
             "player_2": "Cristiano Caratti", 
+            "player_2_h2h": 1, 
             "round": 1, 
             "score": "6-2, 7-6(4), 6-1", 
             "winner": "Neville Godwin"
         }, 
         {
             "player_1": "Francisco Clavet", 
+            "player_1_h2h": 6, 
             "player_2": "Tomas Carbonell", 
+            "player_2_h2h": 0, 
             "round": 1, 
             "score": "7-6(5), 4-6, 1-6, 6-4, 6-3", 
             "winner": "Tomas Carbonell"
         }, 
         {
             "player_1": "Jean-Philippe Fleurian", 
+            "player_1_h2h": 1, 
             "player_2": "Boris Becker", 
+            "player_2_h2h": 2, 
             "round": 1, 
             "score": "6-0, 6-2, 6-3", 
             "winner": "Boris Becker"
@@ -452,224 +580,288 @@
     "2": [
         {
             "player_1": "Pete Sampras", 
+            "player_1_h2h": 1, 
             "player_2": "Mark Philippoussis", 
+            "player_2_h2h": 1, 
             "round": 2, 
             "score": "7-6(4), 6-4, 6-4", 
             "winner": "Pete Sampras"
         }, 
         {
             "player_1": "Byron Black", 
+            "player_1_h2h": 0, 
             "player_2": "Karol Kucera", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "4-6, 6-1, 5-7, 6-3, 6-3", 
             "winner": "Karol Kucera"
         }, 
         {
             "player_1": "Jan Kroslak", 
+            "player_1_h2h": 1, 
             "player_2": "Chris Wilkinson", 
+            "player_2_h2h": 2, 
             "round": 2, 
             "score": "1-6, 7-5, 5-7, 6-4, 6-3", 
             "winner": "Jan Kroslak"
         }, 
         {
             "player_1": "Mark Petchey", 
+            "player_1_h2h": 0, 
             "player_2": "Cedric Pioline", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-1, 6-4, 6-2", 
             "winner": "Cedric Pioline"
         }, 
         {
             "player_1": "Michael Stich", 
+            "player_1_h2h": 2, 
             "player_2": "Shuzo Matsuoka", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "7-6(2), 6-4, 6-7(5), 6-1", 
             "winner": "Michael Stich"
         }, 
         {
             "player_1": "Sandon Stolle", 
+            "player_1_h2h": 0, 
             "player_2": "Magnus Larsson", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-2, 1-6, 7-6(4), 6-4", 
             "winner": "Sandon Stolle"
         }, 
         {
             "player_1": "Greg Rusedski", 
+            "player_1_h2h": 0, 
             "player_2": "Brett Steven", 
+            "player_2_h2h": 2, 
             "round": 2, 
             "score": "7-6(7), 4-6, 7-6(12), 6-2", 
             "winner": "Brett Steven"
         }, 
         {
             "player_1": "Derrick Rostagno", 
+            "player_1_h2h": 1, 
             "player_2": "Richard Krajicek", 
+            "player_2_h2h": 1, 
             "round": 2, 
             "score": "6-4, 6-3, 6-3", 
             "winner": "Richard Krajicek"
         }, 
         {
             "player_1": "Goran Ivanisevic", 
+            "player_1_h2h": 0, 
             "player_2": "Pierre Bouteyre", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "7-5, 6-4, 6-4", 
             "winner": "Goran Ivanisevic"
         }, 
         {
             "player_1": "Alexander Volkov", 
+            "player_1_h2h": 1, 
             "player_2": "Martin Damm", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "7-6(4), 4-6, 4-6, 6-3, 6-4", 
             "winner": "Alexander Volkov"
         }, 
         {
             "player_1": "Gianluca Pozzi", 
+            "player_1_h2h": 0, 
             "player_2": "Patrick Rafter", 
+            "player_2_h2h": 1, 
             "round": 2, 
             "score": "6-1, 7-5, 6-4", 
             "winner": "Patrick Rafter"
         }, 
         {
             "player_1": "Andrei Olhovskiy", 
+            "player_1_h2h": 0, 
             "player_2": "Marc Rosset", 
+            "player_2_h2h": 1, 
             "round": 2, 
             "score": "6-3, 7-6(4), 6-4", 
             "winner": "Marc Rosset"
         }, 
         {
             "player_1": "Stefan Edberg", 
+            "player_1_h2h": 0, 
             "player_2": "Mikael Tillstrom", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "4-6, 6-4, 7-6(5), 6-4", 
             "winner": "Mikael Tillstrom"
         }, 
         {
             "player_1": "Alex Corretja", 
+            "player_1_h2h": 1, 
             "player_2": "Jakob Hlasek", 
+            "player_2_h2h": 1, 
             "round": 2, 
             "score": "4-6, 6-3, 6-4, 6-4", 
             "winner": "Jakob Hlasek"
         }, 
         {
             "player_1": "Jiri Novak", 
+            "player_1_h2h": 0, 
             "player_2": "Jason Stoltenberg", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "7-6(5), 6-1, 6-1", 
             "winner": "Jason Stoltenberg"
         }, 
         {
             "player_1": "Mose Navarra", 
+            "player_1_h2h": 0, 
             "player_2": "Albert Costa", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "4-6, 7-6(6), 3-6, 7-5, 9-7", 
             "winner": "Mose Navarra"
         }, 
         {
             "player_1": "Tim Henman", 
+            "player_1_h2h": 1, 
             "player_2": "Danny Sapsford", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-1, 6-7(3), 6-0, 6-1", 
             "winner": "Tim Henman"
         }, 
         {
             "player_1": "Luke Milligan", 
+            "player_1_h2h": 0, 
             "player_2": "Nicolas Lapentti", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-4, 6-2, 6-7(5), 6-7(3), 6-1", 
             "winner": "Luke Milligan"
         }, 
         {
             "player_1": "Todd Woodbridge", 
+            "player_1_h2h": 1, 
             "player_2": "Magnus Gustafsson", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "7-6(5), 6-3, 6-2", 
             "winner": "Magnus Gustafsson"
         }, 
         {
             "player_1": "Andrea Gaudenzi", 
+            "player_1_h2h": 0, 
             "player_2": "Wayne Ferreira", 
+            "player_2_h2h": 2, 
             "round": 2, 
             "score": "7-5, 7-5, 6-4", 
             "winner": "Wayne Ferreira"
         }, 
         {
             "player_1": "Todd Martin", 
+            "player_1_h2h": 0, 
             "player_2": "Jim Grabb", 
+            "player_2_h2h": 1, 
             "round": 2, 
             "score": "6-2, 6-4, 7-6(5)", 
             "winner": "Todd Martin"
         }, 
         {
             "player_1": "Renzo Furlan", 
+            "player_1_h2h": 0, 
             "player_2": "Colin Beecher", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-4, 7-5, 6-2", 
             "winner": "Renzo Furlan"
         }, 
         {
             "player_1": "Hicham Arazi", 
+            "player_1_h2h": 0, 
             "player_2": "Thomas Johansson", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-4, 6-3, 6-3", 
             "winner": "Thomas Johansson"
         }, 
         {
             "player_1": "Jared Palmer", 
+            "player_1_h2h": 1, 
             "player_2": "Doug Flach", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "2-6, 6-3, 6-3, 6-4", 
             "winner": "Doug Flach"
         }, 
         {
             "player_1": "Jonathan Stark", 
+            "player_1_h2h": 0, 
             "player_2": "Mark Knowles", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-2, 6-1, 6-2", 
             "winner": "Jonathan Stark"
         }, 
         {
             "player_1": "Paul Haarhuis", 
+            "player_1_h2h": 1, 
             "player_2": "Nicolas Pereira", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-2, 7-6(5), 7-6(1)", 
             "winner": "Paul Haarhuis"
         }, 
         {
             "player_1": "Bohdan Ulihrach", 
+            "player_1_h2h": 0, 
             "player_2": "Filip Dewulf", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "1-6, 6-2, 6-1, 6-4", 
             "winner": "Bohdan Ulihrach"
         }, 
         {
             "player_1": "MaliVai Washington", 
+            "player_1_h2h": 1, 
             "player_2": "Thomas Enqvist", 
+            "player_2_h2h": 2, 
             "round": 2, 
             "score": "6-4, 7-6(5), 6-3", 
             "winner": "MaliVai Washington"
         }, 
         {
             "player_1": "Alex Radulescu", 
+            "player_1_h2h": 0, 
             "player_2": "Stefano Pescosolido", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "4-6, 6-7(2), 7-6(4), 6-1, 10-8", 
             "winner": "Alex Radulescu"
         }, 
         {
             "player_1": "David Wheaton", 
+            "player_1_h2h": 1, 
             "player_2": "Guillaume Raoux", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-4, 7-5, 7-6(4)", 
             "winner": "David Wheaton"
         }, 
         {
             "player_1": "Grant Stafford", 
+            "player_1_h2h": 0, 
             "player_2": "Neville Godwin", 
+            "player_2_h2h": 0, 
             "round": 2, 
             "score": "6-4, 7-5, 6-2", 
             "winner": "Neville Godwin"
         }, 
         {
             "player_1": "Tomas Carbonell", 
+            "player_1_h2h": 0, 
             "player_2": "Boris Becker", 
+            "player_2_h2h": 1, 
             "round": 2, 
             "score": "4-6, 6-3, 6-4, 6-2", 
             "winner": "Boris Becker"
@@ -678,112 +870,144 @@
     "3": [
         {
             "player_1": "Pete Sampras", 
+            "player_1_h2h": 0, 
             "player_2": "Karol Kucera", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-4, 6-1, 6-7(5), 7-6(3)", 
             "winner": "Pete Sampras"
         }, 
         {
             "player_1": "Jan Kroslak", 
+            "player_1_h2h": 0, 
             "player_2": "Cedric Pioline", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-2, 7-6(5), 6-3", 
             "winner": "Cedric Pioline"
         }, 
         {
             "player_1": "Michael Stich", 
+            "player_1_h2h": 1, 
             "player_2": "Sandon Stolle", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-3, 4-6, 6-2, 6-3", 
             "winner": "Michael Stich"
         }, 
         {
             "player_1": "Brett Steven", 
+            "player_1_h2h": 1, 
             "player_2": "Richard Krajicek", 
+            "player_2_h2h": 2, 
             "round": 3, 
             "score": "7-6(5), 6-7(5), 6-4, 6-2", 
             "winner": "Richard Krajicek"
         }, 
         {
             "player_1": "Goran Ivanisevic", 
+            "player_1_h2h": 5, 
             "player_2": "Alexander Volkov", 
+            "player_2_h2h": 3, 
             "round": 3, 
             "score": "7-6(3), 7-5, 6-3", 
             "winner": "Goran Ivanisevic"
         }, 
         {
             "player_1": "Patrick Rafter", 
+            "player_1_h2h": 1, 
             "player_2": "Marc Rosset", 
+            "player_2_h2h": 1, 
             "round": 3, 
             "score": "4-6, 6-3, 4-6, 6-1, 6-3", 
             "winner": "Patrick Rafter"
         }, 
         {
             "player_1": "Mikael Tillstrom", 
+            "player_1_h2h": 0, 
             "player_2": "Jakob Hlasek", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-4, 3-6, 7-5, 6-1", 
             "winner": "Jakob Hlasek"
         }, 
         {
             "player_1": "Jason Stoltenberg", 
+            "player_1_h2h": 0, 
             "player_2": "Mose Navarra", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-2, 6-2, 6-2", 
             "winner": "Jason Stoltenberg"
         }, 
         {
             "player_1": "Tim Henman", 
+            "player_1_h2h": 0, 
             "player_2": "Luke Milligan", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-1, 6-3, 6-4", 
             "winner": "Tim Henman"
         }, 
         {
             "player_1": "Magnus Gustafsson", 
+            "player_1_h2h": 1, 
             "player_2": "Wayne Ferreira", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "7-6(4), 7-5, 1-6, 5-7, 6-1", 
             "winner": "Magnus Gustafsson"
         }, 
         {
             "player_1": "Todd Martin", 
+            "player_1_h2h": 1, 
             "player_2": "Renzo Furlan", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "7-6(1), 6-4, 6-2", 
             "winner": "Todd Martin"
         }, 
         {
             "player_1": "Thomas Johansson", 
+            "player_1_h2h": 0, 
             "player_2": "Doug Flach", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-1, 6-4, 6-3", 
             "winner": "Thomas Johansson"
         }, 
         {
             "player_1": "Jonathan Stark", 
+            "player_1_h2h": 1, 
             "player_2": "Paul Haarhuis", 
+            "player_2_h2h": 4, 
             "round": 3, 
             "score": "6-4, 6-7(6), 6-1, 6-4", 
             "winner": "Paul Haarhuis"
         }, 
         {
             "player_1": "Bohdan Ulihrach", 
+            "player_1_h2h": 0, 
             "player_2": "MaliVai Washington", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-3, 6-3, 6-0", 
             "winner": "MaliVai Washington"
         }, 
         {
             "player_1": "Alex Radulescu", 
+            "player_1_h2h": 0, 
             "player_2": "David Wheaton", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-7(4), 6-4, 6-4, 4-6, 6-3", 
             "winner": "Alex Radulescu"
         }, 
         {
             "player_1": "Neville Godwin", 
+            "player_1_h2h": 0, 
             "player_2": "Boris Becker", 
+            "player_2_h2h": 0, 
             "round": 3, 
             "score": "6-6 RET", 
             "winner": "Neville Godwin"
@@ -792,56 +1016,72 @@
     "4": [
         {
             "player_1": "Pete Sampras", 
+            "player_1_h2h": 6, 
             "player_2": "Cedric Pioline", 
+            "player_2_h2h": 0, 
             "round": 4, 
             "score": "6-4, 6-4, 6-2", 
             "winner": "Pete Sampras"
         }, 
         {
             "player_1": "Michael Stich", 
+            "player_1_h2h": 7, 
             "player_2": "Richard Krajicek", 
+            "player_2_h2h": 3, 
             "round": 4, 
             "score": "6-4, 7-6(5), 6-4", 
             "winner": "Richard Krajicek"
         }, 
         {
             "player_1": "Goran Ivanisevic", 
+            "player_1_h2h": 0, 
             "player_2": "Patrick Rafter", 
+            "player_2_h2h": 0, 
             "round": 4, 
             "score": "7-6(4), 4-6, 7-6(7), 6-1", 
             "winner": "Goran Ivanisevic"
         }, 
         {
             "player_1": "Jakob Hlasek", 
+            "player_1_h2h": 2, 
             "player_2": "Jason Stoltenberg", 
+            "player_2_h2h": 2, 
             "round": 4, 
             "score": "6-2, 7-6(2), 6-2", 
             "winner": "Jason Stoltenberg"
         }, 
         {
             "player_1": "Tim Henman", 
+            "player_1_h2h": 0, 
             "player_2": "Magnus Gustafsson", 
+            "player_2_h2h": 0, 
             "round": 4, 
             "score": "7-6(2), 6-4, 7-6(4)", 
             "winner": "Tim Henman"
         }, 
         {
             "player_1": "Todd Martin", 
+            "player_1_h2h": 0, 
             "player_2": "Thomas Johansson", 
+            "player_2_h2h": 0, 
             "round": 4, 
             "score": "3-6, 6-3, 7-5, 6-2", 
             "winner": "Todd Martin"
         }, 
         {
             "player_1": "Paul Haarhuis", 
+            "player_1_h2h": 2, 
             "player_2": "MaliVai Washington", 
+            "player_2_h2h": 0, 
             "round": 4, 
             "score": "6-3, 6-4, 6-2", 
             "winner": "MaliVai Washington"
         }, 
         {
             "player_1": "Alex Radulescu", 
+            "player_1_h2h": 0, 
             "player_2": "Neville Godwin", 
+            "player_2_h2h": 0, 
             "round": 4, 
             "score": "6-3, 6-0, 6-4", 
             "winner": "Alex Radulescu"
@@ -850,28 +1090,36 @@
     "5": [
         {
             "player_1": "Pete Sampras", 
+            "player_1_h2h": 2, 
             "player_2": "Richard Krajicek", 
+            "player_2_h2h": 2, 
             "round": 5, 
             "score": "7-5, 7-6(3), 6-4", 
             "winner": "Richard Krajicek"
         }, 
         {
             "player_1": "Goran Ivanisevic", 
+            "player_1_h2h": 4, 
             "player_2": "Jason Stoltenberg", 
+            "player_2_h2h": 0, 
             "round": 5, 
             "score": "6-3, 7-6(3), 6-7(3), 7-6(3)", 
             "winner": "Jason Stoltenberg"
         }, 
         {
             "player_1": "Tim Henman", 
+            "player_1_h2h": 0, 
             "player_2": "Todd Martin", 
+            "player_2_h2h": 1, 
             "round": 5, 
             "score": "7-6(5), 7-6(2), 6-4", 
             "winner": "Todd Martin"
         }, 
         {
             "player_1": "MaliVai Washington", 
+            "player_1_h2h": 0, 
             "player_2": "Alex Radulescu", 
+            "player_2_h2h": 0, 
             "round": 5, 
             "score": "6-7(5), 7-6(1), 5-7, 7-6(3), 6-2", 
             "winner": "MaliVai Washington"
@@ -880,14 +1128,18 @@
     "6": [
         {
             "player_1": "Richard Krajicek", 
+            "player_1_h2h": 2, 
             "player_2": "Jason Stoltenberg", 
+            "player_2_h2h": 2, 
             "round": 6, 
             "score": "7-5, 6-2, 6-1", 
             "winner": "Richard Krajicek"
         }, 
         {
             "player_1": "Todd Martin", 
+            "player_1_h2h": 1, 
             "player_2": "MaliVai Washington", 
+            "player_2_h2h": 0, 
             "round": 6, 
             "score": "5-7, 6-4, 6-7(6), 6-3, 10-8", 
             "winner": "MaliVai Washington"
@@ -896,7 +1148,9 @@
     "7": [
         {
             "player_1": "Richard Krajicek", 
+            "player_1_h2h": 0, 
             "player_2": "MaliVai Washington", 
+            "player_2_h2h": 0, 
             "round": 7, 
             "score": "6-3, 6-4, 6-3", 
             "winner": "Richard Krajicek"
