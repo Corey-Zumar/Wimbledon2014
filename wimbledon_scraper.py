@@ -6,6 +6,7 @@ import json
 from datetime import datetime
 
 def get_2014_round_one():
+	draw = {}
 	matches = []
 	for i in range(1, 5):
 		url = 'http://www.wimbledon.com/en_GB/scores/draws/ms/r1s' + str(i) + '.html'
@@ -24,15 +25,64 @@ def get_2014_round_one():
 					match['winner'] = ''
 					matches.append(match)
 					prev_name = None
-	list_matches(matches)
+	draw[1] = matches
+	write_draw(2014, draw)
+
+def update_2014_draw_with_stats(round):
+	year = 2014
+	players = {}
+	draw = load_draw(year)
+	curr_round = draw[str(round)]
+	for match in curr_round:
+		player_one = match['player_1']
+		player_two = match['player_2']
+		if player_one in players:
+			match['player_1_prior_stats'] = players[player_one]
+		else:
+			player_one_stats = get_stats(player_one, year)
+			players[player_one] = player_one_stats
+			match['player_1_prior_stats'] = player_one_stats
+		if player_two in players:
+			match['player_2_prior_stats'] = players[player_two]
+		else:
+			player_two_stats = get_stats(player_two, year)
+			players[player_two] = player_two_stats
+			match['player_2_prior_stats'] = player_two_stats
+	players = {}
+	write_draw(year, draw)
+
+def update_2014_draw_with_h2h(round, surface):
+	ids_dict = json.loads(load_atp_ids_file())
+	year = 2014
+	draw = load_draw(year)
+	curr_round = draw[str(round)]
+	for match in curr_round:
+		h2h = get_head_to_head(ids_dict, year, surface, match['player_1'], match['player_2'])
+		if surface is None:
+			match['player_1_h2h'] = h2h[0]
+			match['player_2_h2h'] = h2h[1]
+		else:
+			match['player_1_h2h_' + surface] = h2h[0]
+			match['player_2_h2h_' + surface] = h2h[1]
+	write_draw(year, draw)
+
+def update_2014_draw_with_rankings(round):
+	year = 2014
+	draw = load_draw(year)
+	curr_round = draw[str(round)]
+	for match in curr_round:
+		player_one = match['player_1']
+		player_two = match['player_2']
+		player_one_ranking = get_ranking(player_one, year)
+		match['player_1_ranking'] = player_one_ranking
+		player_two_ranking = get_ranking(player_two, year)
+		match['player_2_ranking'] = player_two_ranking
+		write_draw(year, draw)
 
 def get_draws(start_year, end_year):
 	for i in range(start_year, end_year + 1):
 		print('Getting draw for ' + str(i))
 		write_draw(i, get_draw(i))
-
-def get_draws_last_ten_years():
-	get_draws(2003, 2013)
 
 def write_draw(year, draw):
 	info_file = open('wimbledon_draw_' + str(year) + '.txt', 'w')
@@ -169,27 +219,27 @@ def load_draw(year):
 	filename = 'wimbledon_draw_' + str(year) + '.txt'
 	return load_json(filename)
 
-def get_most_accurate_h2h_year():
+def get_most_accurate_h2h_year(surface):
 	most_accurate_year = 0
 	highest_accuracy = 0
 	for year in range(1993, 2014):
-		accuracy = get_h2h_prediction_accuracy(year, year)
+		accuracy = get_h2h_prediction_accuracy(year, year, surface)
 		if accuracy > highest_accuracy:
 			highest_accuracy = accuracy
 			most_accurate_year = year
 	return 'Year: ' + str(most_accurate_year) + ' Accuracy: ' + str(highest_accuracy)
 
-def get_least_accurate_h2h_year():
+def get_least_accurate_h2h_year(surface):
 	least_accurate_year = 0
 	lowest_accuracy = 100
 	for year in range(1993, 2014):
-		accuracy = get_h2h_prediction_accuracy(year, year)
+		accuracy = get_h2h_prediction_accuracy(year, year, surface)
 		if accuracy < lowest_accuracy:
 			lowest_accuracy = accuracy
 			least_accurate_year = year
 	return 'Year: ' + str(least_accurate_year) + ' Accuracy: ' + str(lowest_accuracy)
 
-def get_h2h_prediction_accuracy(start_year, end_year):
+def get_h2h_prediction_accuracy(start_year, end_year, surface):
 	matches = 0
 	h2h_total = 0
 	h2h_accurate = 0
@@ -200,9 +250,13 @@ def get_h2h_prediction_accuracy(start_year, end_year):
 			for match in round:
 				matches += 1
 				player_one = match['player_1']
-				player_one_h2h = match['player_1_h2h']
 				player_two = match['player_2']
-				player_two_h2h = match['player_2_h2h']
+				if surface is None:
+					player_one_h2h = match['player_1_h2h']
+					player_two_h2h = match['player_2_h2h']
+				else:
+					player_one_h2h = match['player_1_h2h_' + surface]
+					player_two_h2h = match['player_2_h2h_' + surface]
 				winner = match['winner']
 				if player_one_h2h != player_two_h2h and (player_one_h2h > 0 or player_two_h2h) > 0:
 					h2h_total += 1
@@ -259,11 +313,11 @@ def update_draws_with_h2h(start_year, end_year, surface):
 		write_draw(year, draw)
 
 surfaces = ['Hard', 'Clay', 'Grass', 'Carpet']
+date_format = '%d.%m.%Y'
 
 def get_head_to_head(ids_dict, year, surface, player_one, player_two):
-	tournaments_dict = load_tournaments_file()
-	date_format = '%d.%m.%Y'
 	wimbledon_date = datetime.strptime('23.06.2014', date_format)
+	tournaments_dict = load_tournaments_file()
 	url = 'http://www.atpworldtour.com/Players/Head-To-Head.aspx?pId=' + ids_dict[player_one] + '&oId=' + ids_dict[player_two]
 	print('Accessing ' + url)
 	h2h_soup = get_soup(url)
@@ -318,7 +372,7 @@ def get_atp_ids(draw):
 	except Exception as e:
 		print(e)
 		atp_ids = {}
-	round_one = draw[1]
+	round_one = draw[str(1)]
 	for match in round_one:
 		player_1 = match['player_1']
 		player_2 = match['player_2']
@@ -340,3 +394,362 @@ def get_atp_ids(draw):
 def make_json_request(url):
 	response_text = urlopen(url).read().decode('utf-8')
 	return json.loads(response_text)
+
+def update_draws_with_rankings(start_year, end_year):
+	players = {}
+	for year in range(start_year, end_year + 1):
+		draw = load_draw(year)
+		for i in range(1, 8):
+			curr_round = draw[str(i)]
+			for match in curr_round:
+				player_one = match['player_1']
+				player_two = match['player_2']
+				if player_one in players:
+					match['player_1_ranking'] = players[player_one]
+				else:
+					player_one_ranking = get_ranking(player_one, year)
+					match['player_1_ranking'] = player_one_ranking
+					players[player_one] = player_one_ranking
+				if player_two in players:
+					match['player_2_ranking'] = players[player_two]
+				else:
+					player_two_ranking = get_ranking(player_two, year)
+					match['player_2_ranking'] = player_two_ranking
+					players[player_two] = player_two_ranking
+		players = {}
+		write_draw(year, draw)
+
+def get_ranking(player_name, year):
+	wimbledon_date = datetime.strptime('23.06.' + str(year), date_format)
+	first_letter = player_name[0]
+	last_name = player_name[player_name.index(" ") + 1:]
+	last_name_first_two_letters = last_name[:2]
+	url = 'http://www.atpworldtour.com/Tennis/Players/' + last_name_first_two_letters + '/' + first_letter + '/' + urllib.parse.quote_plus(player_name.replace(" ", "-")) + '.aspx?t=rh&y=' + str(year)
+	year
+	ranking_soup = None
+	try:
+		ranking_soup = get_soup(url)
+	except HTTPError as e:
+		url = ''
+		try:
+			url = 'http://www.atpworldtour.com/Tennis/Players/Top-Players/' + player_name.replace(" ", "-") + '.aspx?t=rh&y=' + str(year) 
+			ranking_soup = get_soup(url)
+		except HTTPError:
+			print('Failed: ' + url)
+			return 'Unknown'
+	print('Accessing ' + url)
+	rank_pos = 0
+	if ranking_soup is not None:
+		rankings = ranking_soup.find_all('td')
+		for i in range(0, len(rankings)):
+			date_string = rankings[i]
+			date_string_text = date_string.text
+			if len(date_string_text) == 10:
+				if datetime.strptime(date_string_text, date_format) <= wimbledon_date:
+					return rankings[i + 1].text
+
+def update_draws_with_stats(start_year, end_year):
+	players = {}
+	for year in range(start_year, end_year + 1):
+		draw = load_draw(year)
+		for i in range(1, 8):
+			curr_round = draw[str(i)]
+			for match in curr_round:
+				player_one = match['player_1']
+				player_two = match['player_2']
+				if player_one in players:
+					match['player_1_prior_stats'] = players[player_one]
+				else:
+					player_one_stats = get_stats(player_one, year)
+					players[player_one] = player_one_stats
+					match['player_1_prior_stats'] = player_one_stats
+				if player_two in players:
+					match['player_2_prior_stats'] = players[player_two]
+				else:
+					player_two_stats = get_stats(player_two, year)
+					players[player_two] = player_two_stats
+					match['player_2_prior_stats'] = player_two_stats
+		players = {}
+		write_draw(year, draw)
+
+def get_stats(player_name, year):
+	stats = {}
+	first_letter = player_name[0]
+	last_name = player_name[player_name.index(" ") + 1:]
+	last_name_first_two_letters = last_name[:2]
+	url = 'http://www.atpworldtour.com/Tennis/Players/' + last_name_first_two_letters + '/' + first_letter + '/' + urllib.parse.quote_plus(player_name.replace(" ", "-")) + '.aspx?t=mf&y=' + str(year)
+	stats_soup = None
+	try:
+		stats_soup = get_soup(url)
+	except HTTPError:
+		try:
+			url = 'http://www.atpworldtour.com/Tennis/Players/Top-Players/' + player_name.replace(" ", "-") + '.aspx?t=mf&y=' + str(year) 
+			stats_soup = get_soup(url)
+		except HTTPError:
+			print('Failed: ' + url)
+
+	if stats_soup is not None:
+		print('Accessing ' + url)
+		for title in stats_soup.find_all('li'):
+			try:
+				stat = title.find('span').text
+				if len(stat) < 5 and len(stat) > 0 and ":" not in stat:
+					stat_title = title.text[len(stat):]
+					stats[stat_title] = stat
+			except Exception:
+				continue
+	return stats
+
+def determine_ranking_distance_win_percentage(distance, start_year, end_year):
+	ranking_correct = 0
+	match_total = 0
+	for year in range(start_year, end_year + 1):
+		draw = load_draw(year)
+		for i in range(1, 8):
+			round = draw[str(i)]
+			for match in round:
+				player_one = match['player_1']
+				player_two = match['player_2']
+				player_one_ranking = match['player_1_ranking']
+				player_two_ranking = match['player_2_ranking']
+				player_one_ranking = player_one_ranking.replace(",", "")
+				player_two_ranking = player_two_ranking.replace(",", "")
+				if 'T' in player_one_ranking:
+					player_one_ranking = player_one_ranking[:len(player_one_ranking) - 1]
+				if 'T' in player_two_ranking:
+					player_two_ranking = player_two_ranking[:len(player_two_ranking) - 1]
+				if player_one_ranking != 'Unknown' and player_two_ranking != 'Unknown' and len(player_one_ranking) > 0 and len(player_two_ranking) > 0:
+					player_one_ranking = int(player_one_ranking)
+					player_two_ranking = int(player_two_ranking)
+					winner = match['winner']
+					difference = abs(player_one_ranking - player_two_ranking)
+					upper_threshold = distance + (distance * .2)
+					if distance < 20:
+						upper_threshold = 5
+					if difference > distance and difference < upper_threshold:
+						match_total += 1
+						if (player_one_ranking < player_two_ranking and winner == player_one) or (player_two_ranking < player_one_ranking and winner == player_two):
+							ranking_correct += 1
+	#print('Total matches: ' + str(match_total))
+	#print(distance + (distance * .2))
+	try:
+		return str(ranking_correct / match_total)
+	except Exception:
+		return 'N/A'
+
+
+
+def get_average_ranking_distance(start_year, end_year):
+	ranking_correct = 0
+	match_total = 0
+	total_distance = 0
+	for year in range(start_year, end_year + 1):
+		draw = load_draw(year)
+		for i in range(1, 8):
+			round = draw[str(i)]
+			for match in round:
+				player_one = match['player_1']
+				player_two = match['player_2']
+				player_one_ranking = match['player_1_ranking']
+				player_two_ranking = match['player_2_ranking']
+				player_one_ranking = player_one_ranking.replace(",", "")
+				player_two_ranking = player_two_ranking.replace(",", "")
+				if 'T' in player_one_ranking:
+					player_one_ranking = player_one_ranking[:len(player_one_ranking) - 1]
+				if 'T' in player_two_ranking:
+					player_two_ranking = player_two_ranking[:len(player_two_ranking) - 1]
+				if player_one_ranking != 'Unknown' and player_two_ranking != 'Unknown' and len(player_one_ranking) > 0 and len(player_two_ranking) > 0:
+					player_one_ranking = int(player_one_ranking)
+					player_two_ranking = int(player_two_ranking)
+					match_total += 1
+					winner = match['winner']
+					total_distance += abs(player_one_ranking - player_two_ranking)
+					if (player_one_ranking < player_two_ranking and winner == player_one) or (player_two_ranking < player_one_ranking and winner == player_two):
+						ranking_correct += 1
+	print('Total matches: ' + str(match_total))
+	print('Ranking correct total: ' + str(ranking_correct))
+	print('Percentage: ' + str(ranking_correct / match_total))
+	print('Average distance: ' + str(total_distance / match_total))
+
+def get_accuracy(distance, start_year, end_year, percentage, statname):
+	match_total = 0
+	correct = 0
+	for year in range(start_year, end_year + 1):
+		draw = load_draw(year)
+		for i in range(1, 8):
+			round = draw[str(i)]
+			for match in round:
+				player_one = match['player_1']
+				player_two = match['player_2']
+				winner = match['winner']
+				player_one_stats = match['player_1_prior_stats']
+				player_two_stats = match['player_2_prior_stats']
+				if len(player_one_stats) > 0 and len(player_two_stats) > 0:
+					player_one_stat = player_one_stats[statname]
+					player_two_stat = player_two_stats[statname]
+					if percentage:
+						player_one_stat = int(player_one_stat[0:len(player_one_stat) - 1])
+						player_two_stat = int(player_two_stat[0:len(player_two_stat) - 1])
+					else:
+						player_one_stat = int(player_one_stat)
+						player_two_stat = int(player_two_stat)
+					if distance is not None:
+						difference = abs(player_one_stat - player_two_stat)
+					if distance is None or (difference > distance and difference < distance + 2):
+						match_total += 1
+						if (player_one_stat > player_two_stat and winner == player_one) \
+						or (player_two_stat > player_one_stat and winner == player_two):
+							correct += 1
+	#print('Total matches: ' + str(match_total))
+	#print('Correct ' + statname + ' total: ' + str(correct))
+	try:
+		return str(correct / match_total)
+	except Exception:
+		return 'N/A'
+
+def compare_players(player_one_input, player_two_input):
+	year = 2014
+	draw = load_draw(year)
+	round = draw[str(1)]
+	player_one = None
+	player_two = None
+	for match in round:
+		if match['player_1'] == player_one_input:
+			player_one = match['player_1']
+			player_one_stats = match['player_1_prior_stats']
+			player_one_h2h = match['player_1_h2h']
+			player_one_ranking = match['player_1_ranking']
+			player_one_first_serve_pts_won = player_one_stats['1st Serve Points Won']
+			player_one_second_serve_pts_won = player_one_stats['2nd Serve Points Won']
+			player_one_service_pts_won = player_one_stats['Service Points Won']
+			player_one_total_pts_won = player_one_stats['Total Points Won']
+
+		if match['player_2'] == player_one_input:
+			player_one = match['player_2']
+			player_one_stats = match['player_2_prior_stats']
+			player_one_h2h = match['player_2_h2h']
+			player_one_ranking = match['player_2_ranking']
+			player_one_first_serve_pts_won = player_one_stats['1st Serve Points Won']
+			player_one_second_serve_pts_won = player_one_stats['2nd Serve Points Won']
+			player_one_service_pts_won = player_one_stats['Service Points Won']
+			player_one_total_pts_won = player_one_stats['Total Points Won']
+
+		if match['player_1'] == player_two_input:
+			player_two = match['player_1']
+			player_two_stats = match['player_1_prior_stats']
+			player_two_h2h = match['player_1_h2h']
+			player_two_ranking = match['player_1_ranking']
+			player_two_first_serve_pts_won = player_two_stats['1st Serve Points Won']
+			player_two_second_serve_pts_won = player_two_stats['2nd Serve Points Won']
+			player_two_service_pts_won = player_two_stats['Service Points Won']
+			player_two_total_pts_won = player_two_stats['Total Points Won']
+
+		if match['player_2'] == player_two_input:
+			player_two = match['player_2']
+			player_two_stats = match['player_2_prior_stats']
+			player_two_h2h = match['player_2_h2h']
+			player_two_ranking = match['player_2_ranking']
+			player_two_first_serve_pts_won = player_two_stats['1st Serve Points Won']
+			player_two_second_serve_pts_won = player_two_stats['2nd Serve Points Won']
+			player_two_service_pts_won = player_two_stats['Service Points Won']
+			player_two_total_pts_won = player_two_stats['Total Points Won']
+
+		if player_one is not None and player_two is not None:
+			h2hs = get_head_to_head(json.loads(load_atp_ids_file()), year, None, player_one, player_two)
+			player_one_h2h = h2hs[0]
+			player_two_h2h = h2hs[1]
+
+			print('---- ' + player_one + ' ----')
+			print('Ranking: ' + player_one_ranking)
+			print('Head-To-Head: ' + str(player_one_h2h))
+			print('First Serve Points Won: ' + str(player_one_first_serve_pts_won))
+			print('Second Serve Points Won: ' + str(player_one_second_serve_pts_won))
+			print('Service Points Won: ' + str(player_one_service_pts_won))
+			print('Total Points Won: ' + str(player_one_total_pts_won))
+			print('----------------------------')
+
+			print('---- ' + player_two + ' ----')
+			print('Ranking: ' + player_two_ranking)
+			print('Head-To-Head: ' + str(player_two_h2h))
+			print('First Serve Points Won: ' + str(player_two_first_serve_pts_won))
+			print('Second Serve Points Won: ' + str(player_two_second_serve_pts_won))
+			print('Service Points Won: ' + str(player_two_service_pts_won))
+			print('Total Points Won: ' + str(player_two_total_pts_won))
+			print('----------------------------')
+
+			player_one_ranking = player_one_ranking.replace(",", "")
+			player_two_ranking = player_two_ranking.replace(",", "")
+			if 'T' in player_one_ranking:
+				player_one_ranking = player_one_ranking[:len(player_one_ranking) - 1]
+			if 'T' in player_two_ranking:
+				player_two_ranking = player_two_ranking[:len(player_two_ranking) - 1]
+			player_one_ranking = int(player_one_ranking)
+			player_two_ranking = int(player_two_ranking)
+
+			ranking_advantage = ''
+			ranking_odds = determine_ranking_distance_win_percentage(abs(player_one_ranking - player_two_ranking), 1993, 2013)
+			if player_one_ranking < player_two_ranking:
+				ranking_advantage = player_one
+			elif player_two_ranking > player_one_ranking:
+				ranking_advantage = player_two
+			else:
+				ranking_advantage = 'None'
+
+			player_one_second_serve_pts_won = int(player_one_second_serve_pts_won[0:len(player_one_second_serve_pts_won) - 1])
+			player_two_second_serve_pts_won = int(player_two_second_serve_pts_won[0:len(player_two_second_serve_pts_won) - 1])
+
+			second_serve_pts_odds = get_accuracy(abs(player_one_second_serve_pts_won - player_two_second_serve_pts_won), 1993, 2013, True, '2nd Serve Points Won')
+			second_serve_advantage = ''
+			if player_one_second_serve_pts_won > player_two_second_serve_pts_won:
+				second_serve_advantage = player_one
+			elif player_two_second_serve_pts_won > player_one_second_serve_pts_won:
+				second_serve_advantage = player_two
+			else:
+				second_serve_advantage = 'None'
+
+			player_one_first_serve_pts_won = int(player_one_first_serve_pts_won[0:len(player_one_first_serve_pts_won) - 1])
+			player_two_first_serve_pts_won = int(player_two_first_serve_pts_won[0:len(player_two_first_serve_pts_won) - 1])
+
+			first_serve_pts_odds = get_accuracy(abs(player_one_first_serve_pts_won - player_two_first_serve_pts_won), 1993, 2013, True, '1st Serve Points Won')
+			first_serve_advantage = ''
+			if player_one_first_serve_pts_won > player_two_first_serve_pts_won:
+				first_serve_advantage = player_one
+			elif player_two_first_serve_pts_won > player_one_first_serve_pts_won:
+				first_serve_advantage = player_two
+			else:
+				first_serve_advantage = 'None'
+
+			player_one_service_pts_won = int(player_one_service_pts_won[0:len(player_one_service_pts_won) - 1])
+			player_two_service_pts_won = int(player_two_service_pts_won[0:len(player_two_service_pts_won) - 1])
+
+			service_pts_odds = get_accuracy(abs(player_one_service_pts_won - player_two_service_pts_won), 1993, 2013, True, 'Service Points Won')
+			service_advantage = ''
+			if player_one_service_pts_won > player_two_service_pts_won:
+				service_advantage = player_one
+			elif player_one_service_pts_won > player_one_service_pts_won:
+				service_advantage = player_two
+			else:
+				service_advantage = 'None'
+
+			player_one_total_pts_won = int(player_one_total_pts_won[0:len(player_one_total_pts_won) - 1])
+			player_two_total_pts_won = int(player_two_total_pts_won[0:len(player_two_total_pts_won) - 1])
+
+			total_pts_odds = get_accuracy(abs(player_one_total_pts_won - player_two_total_pts_won), 1993, 2013, True, 'Total Points Won')
+			total_advantage = ''
+			if player_one_total_pts_won > player_two_total_pts_won:
+				total_advantage = player_one
+			elif player_two_total_pts_won > player_one_total_pts_won:
+				total_advantage = player_two
+			else:
+				total_advantage = 'None'
+
+			print('----------------------------')
+			print('Ranking Advantage: ' + ranking_advantage + " " + ranking_odds)
+			print('First Serve Points Won Advantage: ' + first_serve_advantage + " " + first_serve_pts_odds)
+			print('Second Serve Points Won Advantage: ' + second_serve_advantage + " " + second_serve_pts_odds)
+			print('Total Points Won Advantage: ' + total_advantage + " " + total_pts_odds)
+			print('----------------------------')
+
+
+			break
+
